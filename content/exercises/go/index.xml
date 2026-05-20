@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go on goalgo</title><link>https://gotogolang.github.io/content/exercises/go/</link><description>Recent content in Go on goalgo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/content/exercises/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Package mathutils</title><link>https://gotogolang.github.io/content/exercises/go/go-multi-01/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/exercises/go/go-multi-01/</guid><description>&lt;p>Build a &lt;code>mathutils&lt;/code> package with three functions over integer slices:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Function&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Max(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>maximum element&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Min(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>minimum element&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Sum(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>sum of elements&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Each function returns &lt;code>0&lt;/code> for an empty slice.&lt;/p>
+&lt;p>Edit &lt;code>mathutils/mathutils.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test ./...&lt;/code> to verify.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-multi-01"
+ data-tps-url="https://api.goalgo.io">
+ &lt;/script>
+&lt;/div></description></item><item><title>Reverse a String</title><link>https://gotogolang.github.io/content/exercises/go/go-func-01/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/exercises/go/go-func-01/</guid><description>&lt;p>Implement &lt;code>Reverse(s string) string&lt;/code> — returns the string in reverse order.&lt;/p>
+&lt;p>&lt;strong>Examples:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>Reverse(&amp;#34;hello&amp;#34;) → &amp;#34;olleh&amp;#34;
+Reverse(&amp;#34;&amp;#34;) → &amp;#34;&amp;#34;
+Reverse(&amp;#34;racecar&amp;#34;) → &amp;#34;racecar&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Tests are in &lt;code>solution_test.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test&lt;/code> to verify.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-func-01"
+ data-tps-url="https://api.goalgo.io">
+ &lt;/script>
+&lt;/div></description></item><item><title>Multiplication Table</title><link>https://gotogolang.github.io/content/exercises/go/go-expr-01/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/exercises/go/go-expr-01/</guid><description>&lt;p>Print a 5×5 multiplication table using nested loops.&lt;/p>
+&lt;p>&lt;strong>Format:&lt;/strong> each line is &lt;code>A x B = C&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Example output:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>1 x 1 = 1
+1 x 2 = 2
+...
+5 x 5 = 25
+&lt;/code>&lt;/pre>&lt;p>Run &lt;code>check&lt;/code> in the terminal to verify your solution.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-expr-01"
+ data-tps-url="https://api.goalgo.io">
+ &lt;/script>
+&lt;/div></description></item></channel></rss>

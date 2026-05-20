@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slices on goalgo</title><link>https://gotogolang.github.io/tags/slices/</link><description>Recent content in Slices on goalgo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/tags/slices/index.xml" rel="self" type="application/rss+xml"/><item><title>Package mathutils</title><link>https://gotogolang.github.io/content/exercises/go/go-multi-01/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/exercises/go/go-multi-01/</guid><description>&lt;p>Build a &lt;code>mathutils&lt;/code> package with three functions over integer slices:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Function&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Max(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>maximum element&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Min(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>minimum element&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Sum(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>sum of elements&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Each function returns &lt;code>0&lt;/code> for an empty slice.&lt;/p>
+&lt;p>Edit &lt;code>mathutils/mathutils.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test ./...&lt;/code> to verify.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-multi-01"
+ data-tps-url="https://api.goalgo.io">
+ &lt;/script>
+&lt;/div></description></item></channel></rss>

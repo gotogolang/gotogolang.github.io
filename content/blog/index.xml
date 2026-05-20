@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on goalgo</title><link>https://gotogolang.github.io/content/blog/</link><description>Recent content in Blog on goalgo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/content/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, goalgo</title><link>https://gotogolang.github.io/content/blog/hello-world/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/blog/hello-world/</guid><description>&lt;p>goalgo is a platform for practicing algorithms in the browser using a real terminal.&lt;/p>
+&lt;p>No setup, no local environment. Open a page, get a container running Go, solve a problem in vim.&lt;/p>
+&lt;h2 id="stack" class=link_owner>
+ Stack
+ &lt;a href="#stack" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Hugo&lt;/strong> — static site, GitHub Pages&lt;/li>
+&lt;li>&lt;strong>Go / Chi&lt;/strong> — backend microservices&lt;/li>
+&lt;li>&lt;strong>Docker&lt;/strong> — isolated exercise containers&lt;/li>
+&lt;li>&lt;strong>xterm.js&lt;/strong> — browser terminal&lt;/li>
+&lt;li>&lt;strong>vim&lt;/strong> — editor inside the container, pre-configured with vim-go and gopls&lt;/li>
+&lt;/ul>
+&lt;h2 id="whats-coming" class=link_owner>
+ What&amp;rsquo;s coming
+ &lt;a href="#whats-coming" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>More Go exercises&lt;/li>
+&lt;li>Python support&lt;/li>
+&lt;li>Blog posts on algorithms and Go internals&lt;/li>
+&lt;/ul></description></item></channel></rss>

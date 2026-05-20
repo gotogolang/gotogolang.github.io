@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Functions on goalgo</title><link>https://gotogolang.github.io/tags/functions/</link><description>Recent content in Functions on goalgo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/tags/functions/index.xml" rel="self" type="application/rss+xml"/><item><title>Reverse a String</title><link>https://gotogolang.github.io/content/exercises/go/go-func-01/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/exercises/go/go-func-01/</guid><description>&lt;p>Implement &lt;code>Reverse(s string) string&lt;/code> — returns the string in reverse order.&lt;/p>
+&lt;p>&lt;strong>Examples:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>Reverse(&amp;#34;hello&amp;#34;) → &amp;#34;olleh&amp;#34;
+Reverse(&amp;#34;&amp;#34;) → &amp;#34;&amp;#34;
+Reverse(&amp;#34;racecar&amp;#34;) → &amp;#34;racecar&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Tests are in &lt;code>solution_test.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test&lt;/code> to verify.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-func-01"
+ data-tps-url="https://api.goalgo.io">
+ &lt;/script>
+&lt;/div></description></item></channel></rss>
