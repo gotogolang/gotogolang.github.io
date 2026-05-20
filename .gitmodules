@@ -1,0 +1,34 @@
+# All goalgo component repositories as submodules.
+# Private repos require DEPLOY_TOKEN or SSH key.
+
+[submodule "site-config"]
+	path   = site-config
+	url    = https://github.com/gotogolang/site-config.git
+
+[submodule "site-content"]
+	path   = site-content
+	url    = https://github.com/gotogolang/site-content.git
+
+[submodule "themes"]
+	path   = themes
+	url    = https://github.com/gotogolang/themes.git
+
+[submodule "exercises"]
+	path   = exercises
+	url    = https://github.com/gotogolang/exercises.git
+
+[submodule "docker-images"]
+	path   = docker-images
+	url    = https://github.com/gotogolang/docker-images.git
+
+[submodule "vim-configs"]
+	path   = vim-configs
+	url    = https://github.com/gotogolang/vim-configs.git
+
+[submodule "tps-backend"]
+	path   = tps-backend
+	url    = https://github.com/gotogolang/tps-backend.git
+
+[submodule "tps-widget"]
+	path   = tps-widget
+	url    = https://github.com/gotogolang/tps-widget.git

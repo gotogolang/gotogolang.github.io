@@ -1,0 +1,43 @@
+# Central manifest of goalgo platform.
+# Declares which version of every component is in use.
+# Update a version here → rebuild the platform.
+
+[platform]
+version = "v0.1.0"
+
+# ---- Site -------------------------------------------------------------------
+
+[components.site]
+config  = "site-config @ v0.1.0"
+content = "site-content @ main"
+theme   = "themes/compose @ main"
+
+# ---- Backend ----------------------------------------------------------------
+
+[components.backend]
+tps_backend = "tps-backend @ v0.1.0"
+tps_widget  = "tps-widget @ v0.1.0"
+
+# ---- Content ----------------------------------------------------------------
+
+[components.exercises]
+go = "exercises/go @ v0.1.0"
+
+# ---- Container images -------------------------------------------------------
+
+[components.images]
+"docker-images/go" = "v0.1.0"
+
+# ---- IDE configs ------------------------------------------------------------
+
+[components.ide]
+"vim-configs/go" = "v0.1.0"
+
+# ---- Pool configuration per language ----------------------------------------
+
+[pools.go]
+image         = "gotogolang/tps-go:v0.1.0"
+pool_size     = 3
+timeout_sec   = 3600
+pool_port     = 8082
+exercises_dir = "/exercises/go"
