@@ -1,7 +1,0 @@
-[component]
-name    = "site-content"
-version = "v0.1.0"
-
-[structure]
-exercises_dir = "content/exercises"
-blog_dir      = "content/blog"
