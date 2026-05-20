@@ -25,10 +25,10 @@
 &lt;p>Edit &lt;code>mathutils/mathutils.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test ./...&lt;/code> to verify.&lt;/p>
 &lt;div class="goalgo-terminal-wrap">
  &lt;script
- src="https://gotogolang.github.io/widget.js"
+ src=""
  data-pack="go"
  data-exercise="go-multi-01"
- data-tps-url="https://api.goalgo.io">
+ data-tps-url="">
  &lt;/script>
 &lt;/div></description></item><item><title>Reverse a String</title><link>https://gotogolang.github.io/content/exercises/go/go-func-01/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/exercises/go/go-func-01/</guid><description>&lt;p>Implement &lt;code>Reverse(s string) string&lt;/code> — returns the string in reverse order.&lt;/p>
 &lt;p>&lt;strong>Examples:&lt;/strong>&lt;/p>
@@ -38,10 +38,10 @@ Reverse(&amp;#34;racecar&amp;#34;) → &amp;#34;racecar&amp;#34;
 &lt;/code>&lt;/pre>&lt;p>Tests are in &lt;code>solution_test.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test&lt;/code> to verify.&lt;/p>
 &lt;div class="goalgo-terminal-wrap">
  &lt;script
- src="https://gotogolang.github.io/widget.js"
+ src=""
  data-pack="go"
  data-exercise="go-func-01"
- data-tps-url="https://api.goalgo.io">
+ data-tps-url="">
  &lt;/script>
 &lt;/div></description></item><item><title>Multiplication Table</title><link>https://gotogolang.github.io/content/exercises/go/go-expr-01/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/content/exercises/go/go-expr-01/</guid><description>&lt;p>Print a 5×5 multiplication table using nested loops.&lt;/p>
 &lt;p>&lt;strong>Format:&lt;/strong> each line is &lt;code>A x B = C&lt;/code>&lt;/p>
@@ -53,9 +53,9 @@ Reverse(&amp;#34;racecar&amp;#34;) → &amp;#34;racecar&amp;#34;
 &lt;/code>&lt;/pre>&lt;p>Run &lt;code>check&lt;/code> in the terminal to verify your solution.&lt;/p>
 &lt;div class="goalgo-terminal-wrap">
  &lt;script
- src="https://gotogolang.github.io/widget.js"
+ src=""
  data-pack="go"
  data-exercise="go-expr-01"
- data-tps-url="https://api.goalgo.io">
+ data-tps-url="">
  &lt;/script>
 &lt;/div></description></item></channel></rss>

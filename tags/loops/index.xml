@@ -8,9 +8,9 @@
 &lt;/code>&lt;/pre>&lt;p>Run &lt;code>check&lt;/code> in the terminal to verify your solution.&lt;/p>
 &lt;div class="goalgo-terminal-wrap">
  &lt;script
- src="https://gotogolang.github.io/widget.js"
+ src=""
  data-pack="go"
  data-exercise="go-expr-01"
- data-tps-url="https://api.goalgo.io">
+ data-tps-url="">
  &lt;/script>
 &lt;/div></description></item></channel></rss>

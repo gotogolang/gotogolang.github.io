@@ -25,9 +25,9 @@
 &lt;p>Edit &lt;code>mathutils/mathutils.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test ./...&lt;/code> to verify.&lt;/p>
 &lt;div class="goalgo-terminal-wrap">
  &lt;script
- src="https://gotogolang.github.io/widget.js"
+ src=""
  data-pack="go"
  data-exercise="go-multi-01"
- data-tps-url="https://api.goalgo.io">
+ data-tps-url="">
  &lt;/script>
 &lt;/div></description></item></channel></rss>
