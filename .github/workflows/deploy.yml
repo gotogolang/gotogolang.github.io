@@ -26,7 +26,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: gotogolang/site-content
-          path: site/content
+          path: _content-src
+
+      - name: Place content into Hugo site
+        run: cp -r _content-src/content site/
 
       - name: Install Hugo Extended 0.148.0
         run: |
