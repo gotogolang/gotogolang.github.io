@@ -1,59 +1,51 @@
 version: "3.9"
 
-# Local development stack.
-# Pool-service creates sibling containers via Docker socket mount.
-# EXERCISES_HOST_PATH must point to the host-absolute path of ./exercises
-# (Docker daemon resolves bind mounts from the host, not from inside the container).
-
-x-exercises-mount: &exercises-host
-  type: bind
-  source: ${EXERCISES_HOST_PATH:-./exercises}
-  target: /exercises
-  read_only: true
+# Production stack. Pull images from GHCR:
+#   docker compose pull && docker compose up -d
+#
+# EXERCISES_HOST_PATH — host-absolute path to the exercises directory.
+# Docker daemon resolves bind mounts from the host, not from inside containers.
 
 services:
 
   # --------------------------------------------------------------------------
   session-service:
-    build:
-      context: ./tps-backend
-      dockerfile: session-service/Dockerfile
+    image: ghcr.io/gotogolang/session-service:latest
     restart: unless-stopped
     ports:
-      - "8081:8081"
+      - "127.0.0.1:8081:8081"
     environment:
       SESSION_PORT: "8081"
-      JWT_SECRET:   "${JWT_SECRET:-dev-secret-change-in-production}"
+      JWT_SECRET:   "${JWT_SECRET}"
 
   # --------------------------------------------------------------------------
   pool-service-go:
-    build:
-      context: ./tps-backend
-      dockerfile: pool-service/Dockerfile
+    image: ghcr.io/gotogolang/pool-service:latest
     restart: unless-stopped
     ports:
-      - "8082:8082"
+      - "127.0.0.1:8082:8082"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - *exercises-host
+      - type: bind
+        source: "${EXERCISES_HOST_PATH}"
+        target: /exercises
+        read_only: true
     environment:
       POOL_PORT:      "8082"
       PACK_ID:        "go"
-      IMAGE_TAG:      "gotogolang/tps-go:v0.1.0"
-      POOL_SIZE:      "3"
-      EXERCISES_DIR:  "${EXERCISES_HOST_PATH:-./exercises}/go"
+      IMAGE_TAG:      "ghcr.io/gotogolang/tps-go:latest"
+      POOL_SIZE:      "${POOL_SIZE:-3}"
+      EXERCISES_DIR:  "${EXERCISES_HOST_PATH}/go"
 
   # --------------------------------------------------------------------------
   gateway:
-    build:
-      context: ./tps-backend
-      dockerfile: gateway/Dockerfile
+    image: ghcr.io/gotogolang/gateway:latest
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "127.0.0.1:8080:8080"
     volumes:
       - type: bind
-        source: ./exercises
+        source: "${EXERCISES_HOST_PATH}"
         target: /exercises
         read_only: true
     environment:
@@ -61,11 +53,11 @@ services:
       SESSION_SERVICE_URL: "http://session-service:8081"
       POOL_SERVICES:       "go=http://pool-service-go:8082"
       EXERCISES_BASE_DIR:  "/exercises"
-      CORS_ORIGINS:        "${CORS_ORIGINS:-*}"
+      CORS_ORIGINS:        "${CORS_ORIGINS:-https://gotogolang.github.io}"
     depends_on:
       - session-service
       - pool-service-go
 
 networks:
   default:
-    name: goalgo-local
+    name: goalgo
