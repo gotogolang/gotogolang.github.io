@@ -16,6 +16,11 @@
   transform: scaleX(-1);
 }
 
+/* More breathing room above headings in content */
+.content h2 { margin-top: 2.5rem; }
+.content h3 { margin-top: 2rem; }
+.content h4 { margin-top: 1.5rem; }
+
 /* Terminal widget container */
 .goalgo-terminal-wrap {
   margin: 2rem 0;
