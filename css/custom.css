@@ -104,19 +104,22 @@ a.sidebar-para.active {
   border-left-color: var(--color-accent);
 }
 
-/* TOC of active paragraph — third level, accent vertical bar */
-.sidebar-toc {
-  margin: 0.1rem 0 0.5rem 1.1rem;
-  padding-left: 0.6rem;
-  border-left: 2px solid var(--color-accent);
+/* TOC of active paragraph — theme JS adds .toc / .toc_active to <nav>,
+   .toc_item to <li>, .toc_link to <a>. Override colours & indent. */
+.aside .toc {
+  padding: 0 0 0.4rem 1.3rem;
+  border-left-color: var(--color-accent);
+  margin: 0;
 }
-.sidebar-toc ul { margin: 0; padding: 0; list-style: none; }
-.sidebar-toc li { margin: 0; }
-.sidebar-toc a  {
+.aside .toc_item { margin: 0; }
+.aside .toc_link {
   display: block;
-  padding: 0.12rem 0;
+  padding: 0.1rem 0;
   font-size: 0.72rem;
   color: var(--color-fg);
   opacity: 0.55;
 }
-.sidebar-toc a:hover { opacity: 1; }
+.aside .toc_link:hover {
+  opacity: 1;
+  color: var(--color-accent);
+}
