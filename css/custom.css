@@ -10,6 +10,12 @@
   --font-mono:    "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
 }
 
+/* Mirrored last character in nav items */
+.mirror-last {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
 /* Terminal widget container */
 .goalgo-terminal-wrap {
   margin: 2rem 0;
