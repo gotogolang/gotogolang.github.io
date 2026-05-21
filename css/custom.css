@@ -39,7 +39,7 @@ code, pre {
 
 /* Course title (h2) */
 .aside .section_title {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-weight: 700;
@@ -63,7 +63,7 @@ details.sidebar-chapter > summary {
   align-items: center;
   gap: 0.45rem;
   padding: 0.45rem 0;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-fg);
   user-select: none;
@@ -91,7 +91,7 @@ details.sidebar-chapter > summary a             { color: inherit; }
 a.sidebar-para {
   display: block;
   padding: 0.28rem 0 0.28rem 1.1rem;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--color-fg);
   opacity: 0.6;
   border-left: 2px solid transparent;
@@ -115,7 +115,7 @@ a.sidebar-para.active {
 .aside .toc_link {
   display: block;
   padding: 0.1rem 0;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: var(--color-fg);
   opacity: 0.55;
 }

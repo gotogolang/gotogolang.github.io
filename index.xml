@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gotogolang on goalgo</title><link>https://gotogolang.github.io/</link><description>Recent content in gotogolang on goalgo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Арифметика и присваивание</title><link>https://gotogolang.github.io/exercises/go/chapter-03/01-arithmetic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-03/01-arithmetic/</guid><description>&lt;h2 id="арифметические-операторы" class=link_owner>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gotogolang on GoToGo</title><link>https://gotogolang.github.io/</link><description>Recent content in gotogolang on GoToGo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Арифметика и присваивание</title><link>https://gotogolang.github.io/exercises/go/chapter-03/01-arithmetic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-03/01-arithmetic/</guid><description>&lt;h2 id="арифметические-операторы" class=link_owner>
  Арифметические операторы
  &lt;a href="#%d0%b0%d1%80%d0%b8%d1%84%d0%bc%d0%b5%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b" class="link icon">
  &lt;svg>
@@ -652,4 +652,32 @@ require (
 &lt;li>More Go exercises&lt;/li>
 &lt;li>Python support&lt;/li>
 &lt;li>Blog posts on algorithms and Go internals&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>About</title><link>https://gotogolang.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/about/</guid><description>&lt;h2 id="go-to-go" class=link_owner>
+ Go To Go!
+ &lt;a href="#go-to-go" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;strong>GoToGo&lt;/strong> — интерактивный курс по языку программирования Go с упражнениями прямо в браузере.&lt;/p>
+&lt;p>Никаких установок, никаких настроек окружения. Открываешь страницу — и пишешь код.&lt;/p>
+&lt;h2 id="как-это-устроено" class=link_owner>
+ Как это устроено
+ &lt;a href="#%d0%ba%d0%b0%d0%ba-%d1%8d%d1%82%d0%be-%d1%83%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%be" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Каждая тема курса разбита на короткие параграфы с теорией и практическими заданиями.
+В упражнениях — встроенный терминал: пишешь решение, запускаешь, получаешь результат.&lt;/p>
+&lt;h2 id="статус" class=link_owner>
+ Статус
+ &lt;a href="#%d1%81%d1%82%d0%b0%d1%82%d1%83%d1%81" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Проект находится в активной разработке. Первые главы уже доступны:&lt;/p></description></item></channel></rss>
