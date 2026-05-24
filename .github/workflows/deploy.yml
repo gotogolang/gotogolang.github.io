@@ -48,3 +48,16 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site/public
           publish_branch: gh-pages
+
+      - name: Set up SSH key for mirror deploy
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_deploy
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_deploy
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Sync static mirror to gotogo.pro
+        run: |
+          rsync -a --delete \
+            -e "ssh -i ~/.ssh/id_deploy -o StrictHostKeyChecking=no" \
+            site/public/ \
+            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/gotogo.pro/
