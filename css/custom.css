@@ -45,6 +45,52 @@ code, pre {
 .badge-hard   { color: #ef476f; }
 
 /* ------------------------------------------------------------------ */
+/*  TL;DR summary shortcode                                           */
+/* ------------------------------------------------------------------ */
+
+.dojo-summary {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  padding: 0;
+  background: rgba(0, 255, 136, 0.04);
+}
+
+.dojo-summary__toggle {
+  list-style: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dojo-summary__toggle::-webkit-details-marker { display: none; }
+.dojo-summary__toggle::before {
+  content: "▸";
+  font-size: 0.6rem;
+  opacity: 0.6;
+  transition: transform 0.15s ease;
+}
+.dojo-summary[open] .dojo-summary__toggle::before {
+  transform: rotate(90deg);
+}
+
+.dojo-summary__body {
+  padding: 0 0.9rem 0.8rem;
+  font-size: 0.92rem;
+}
+.dojo-summary__body > :first-child { margin-top: 0; }
+.dojo-summary__body > :last-child  { margin-bottom: 0; }
+
+/* ------------------------------------------------------------------ */
 /*  Sidebar accordion                                                  */
 /* ------------------------------------------------------------------ */
 
