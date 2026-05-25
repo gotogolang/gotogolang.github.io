@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Loops on GoToGo</title><link>https://gotogolang.github.io/tags/loops/</link><description>Recent content in Loops on GoToGo</description><generator>Hugo</generator><language>en</language><lastBuildDate/><atom:link href="https://gotogolang.github.io/tags/loops/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Loops on GoToGo</title><link>https://gotogolang.github.io/tags/loops/</link><description>Recent content in Loops on GoToGo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/tags/loops/index.xml" rel="self" type="application/rss+xml"/><item><title>Multiplication Table</title><link>https://gotogolang.github.io/go/multiplication-table/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/multiplication-table/</guid><description>&lt;p>Print a 5×5 multiplication table using nested loops.&lt;/p>
+&lt;p>&lt;strong>Format:&lt;/strong> each line is &lt;code>A x B = C&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Example output:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>1 x 1 = 1
+1 x 2 = 2
+...
+5 x 5 = 25
+&lt;/code>&lt;/pre>&lt;p>Run &lt;code>check&lt;/code> in the terminal to verify your solution.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-expr-01"
+ data-tps-url="https://api.gotogo.pro">
+ &lt;/script>
+&lt;/div></description></item></channel></rss>

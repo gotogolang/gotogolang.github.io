@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gotogolang on GoToGo</title><link>https://gotogolang.github.io/</link><description>Recent content in gotogolang on GoToGo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Арифметика и присваивание</title><link>https://gotogolang.github.io/exercises/go/chapter-03/01-arithmetic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-03/01-arithmetic/</guid><description>&lt;h2 id="арифметические-операторы" class=link_owner>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gotogolang on GoToGo</title><link>https://gotogolang.github.io/</link><description>Recent content in gotogolang on GoToGo</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://gotogolang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Арифметика и присваивание</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/01-arithmetic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/01-arithmetic/</guid><description>&lt;h2 id="арифметические-операторы" class=link_owner>
  Арифметические операторы
  &lt;a href="#%d0%b0%d1%80%d0%b8%d1%84%d0%bc%d0%b5%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b" class="link icon">
  &lt;svg>
@@ -54,7 +54,7 @@
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">i&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">5&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span> &lt;span class="c1">// i == 6&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">i&lt;/span>&lt;span class="o">--&lt;/span> &lt;span class="c1">// i == 5&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>++&lt;/code> и &lt;code>--&lt;/code> — операторы-инструкции, а не выражения. Их нельзя использовать в правой части присваивания: &lt;code>j = i++&lt;/code> — ошибка компиляции. Префиксная форма (&lt;code>++i&lt;/code>) в Go отсутствует.&lt;/p></description></item><item><title>Объявление переменных</title><link>https://gotogolang.github.io/exercises/go/chapter-02/01-variables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-02/01-variables/</guid><description>&lt;h2 id="var-и-" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>++&lt;/code> и &lt;code>--&lt;/code> — операторы-инструкции, а не выражения. Их нельзя использовать в правой части присваивания: &lt;code>j = i++&lt;/code> — ошибка компиляции. Префиксная форма (&lt;code>++i&lt;/code>) в Go отсутствует.&lt;/p></description></item><item><title>Объявление переменных</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</guid><description>&lt;h2 id="var-и-" class=link_owner>
  var и :=
  &lt;a href="#var-%d0%b8-" class="link icon">
  &lt;svg>
@@ -83,7 +83,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Go требует &lt;code>camelCase&lt;/code>. Имена с прописной буквы (&lt;code>Name&lt;/code>, &lt;code>Println&lt;/code>) экспортируются из пакета. Имена со строчной (&lt;code>name&lt;/code>, &lt;code>count&lt;/code>) — приватные.&lt;/p></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/exercises/go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
+&lt;p>Go требует &lt;code>camelCase&lt;/code>. Имена с прописной буквы (&lt;code>Name&lt;/code>, &lt;code>Println&lt;/code>) экспортируются из пакета. Имена со строчной (&lt;code>name&lt;/code>, &lt;code>count&lt;/code>) — приватные.&lt;/p></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
  Краткая история
  &lt;a href="#%d0%ba%d1%80%d0%b0%d1%82%d0%ba%d0%b0%d1%8f-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f" class="link icon">
  &lt;svg>
@@ -114,7 +114,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;strong>Компиляция в нативный код&lt;/strong> — нет виртуальной машины, нет интерпретатора.&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/exercises/go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-go" class=link_owner>
+&lt;p>&lt;strong>Компиляция в нативный код&lt;/strong> — нет виртуальной машины, нет интерпретатора.&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-go" class=link_owner>
  Hello, Go!
  &lt;a href="#hello-go" class="link icon">
  &lt;svg>
@@ -144,7 +144,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Пакет — базовая единица организации кода в Go. Несколько пакетов в одном импорте:&lt;/p></description></item><item><title>Сравнение, логика и биты</title><link>https://gotogolang.github.io/exercises/go/chapter-03/02-comparison-bitwise/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-03/02-comparison-bitwise/</guid><description>&lt;h2 id="операторы-сравнения" class=link_owner>
+&lt;p>Пакет — базовая единица организации кода в Go. Несколько пакетов в одном импорте:&lt;/p></description></item><item><title>Сравнение, логика и биты</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/02-comparison-bitwise/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/02-comparison-bitwise/</guid><description>&lt;h2 id="операторы-сравнения" class=link_owner>
  Операторы сравнения
  &lt;a href="#%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b-%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f" class="link icon">
  &lt;svg>
@@ -276,7 +276,7 @@
 == != &amp;lt; &amp;lt;= &amp;gt; &amp;gt;=
 &amp;amp;&amp;amp;
 ||
-&lt;/code>&lt;/pre>&lt;p>При сомнениях используйте скобки.&lt;/p></description></item><item><title>Числовые типы</title><link>https://gotogolang.github.io/exercises/go/chapter-02/02-numeric-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-02/02-numeric-types/</guid><description>&lt;h2 id="целочисленные-типы" class=link_owner>
+&lt;/code>&lt;/pre>&lt;p>При сомнениях используйте скобки.&lt;/p></description></item><item><title>Числовые типы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/02-numeric-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/02-numeric-types/</guid><description>&lt;h2 id="целочисленные-типы" class=link_owner>
  Целочисленные типы
  &lt;a href="#%d1%86%d0%b5%d0%bb%d0%be%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5-%d1%82%d0%b8%d0%bf%d1%8b" class="link icon">
  &lt;svg>
@@ -345,7 +345,7 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>Для большинства задач используйте &lt;code>int&lt;/code> — «естественный» целочисленный тип Go.&lt;/p></description></item><item><title>Компиляция и сборка</title><link>https://gotogolang.github.io/exercises/go/chapter-01/03-compilation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-01/03-compilation/</guid><description>&lt;h2 id="основные-команды" class=link_owner>
+&lt;p>Для большинства задач используйте &lt;code>int&lt;/code> — «естественный» целочисленный тип Go.&lt;/p></description></item><item><title>Компиляция и сборка</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</guid><description>&lt;h2 id="основные-команды" class=link_owner>
  Основные команды
  &lt;a href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b" class="link icon">
  &lt;svg>
@@ -370,7 +370,7 @@ go build -o app main.go # бинарник с заданным именем
 &lt;pre tabindex="0">&lt;code>GOOS=linux GOARCH=amd64 go build -o app-linux main.go
 GOOS=darwin GOARCH=arm64 go build -o app-mac main.go
 GOOS=windows GOARCH=amd64 go build -o app.exe main.go
-&lt;/code>&lt;/pre>&lt;p>&lt;code>GOOS&lt;/code> — целевая ОС, &lt;code>GOARCH&lt;/code> — архитектура процессора.&lt;/p></description></item><item><title>Строки и символы</title><link>https://gotogolang.github.io/exercises/go/chapter-02/03-strings-runes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-02/03-strings-runes/</guid><description>&lt;h2 id="строки" class=link_owner>
+&lt;/code>&lt;/pre>&lt;p>&lt;code>GOOS&lt;/code> — целевая ОС, &lt;code>GOARCH&lt;/code> — архитектура процессора.&lt;/p></description></item><item><title>Строки и символы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/03-strings-runes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/03-strings-runes/</guid><description>&lt;h2 id="строки" class=link_owner>
  Строки
  &lt;a href="#%d1%81%d1%82%d1%80%d0%be%d0%ba%d0%b8" class="link icon">
  &lt;svg>
@@ -394,7 +394,7 @@ GOOS=windows GOARCH=amd64 go build -o app.exe main.go
 &lt;p>&lt;code>rune&lt;/code> — псевдоним для &lt;code>int32&lt;/code>, представляет один Unicode code point (символ).&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">r&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="sc">&amp;#39;А&amp;#39;&lt;/span> &lt;span class="c1">// тип rune, значение 1040&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">string&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1">// &amp;#34;А&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Одинарные кавычки — для &lt;code>rune&lt;/code>, двойные — для &lt;code>string&lt;/code>.&lt;/p></description></item><item><title>Условные конструкции</title><link>https://gotogolang.github.io/exercises/go/chapter-03/03-conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-03/03-conditions/</guid><description>&lt;h2 id="if--else" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Одинарные кавычки — для &lt;code>rune&lt;/code>, двойные — для &lt;code>string&lt;/code>.&lt;/p></description></item><item><title>Условные конструкции</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/03-conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/03-conditions/</guid><description>&lt;h2 id="if--else" class=link_owner>
  if / else
  &lt;a href="#if--else" class="link icon">
  &lt;svg>
@@ -431,7 +431,7 @@ GOOS=windows GOARCH=amd64 go build -o app.exe main.go
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">default&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;выходной&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>switch&lt;/code> не требует &lt;code>break&lt;/code> — каждый &lt;code>case&lt;/code> завершается автоматически. Для «провала» в следующий &lt;code>case&lt;/code> — &lt;code>fallthrough&lt;/code>.&lt;/p></description></item><item><title>Bool, nil и нулевые значения</title><link>https://gotogolang.github.io/exercises/go/chapter-02/04-bool-nil-zero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-02/04-bool-nil-zero/</guid><description>&lt;h2 id="булев-тип" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>switch&lt;/code> не требует &lt;code>break&lt;/code> — каждый &lt;code>case&lt;/code> завершается автоматически. Для «провала» в следующий &lt;code>case&lt;/code> — &lt;code>fallthrough&lt;/code>.&lt;/p></description></item><item><title>Bool, nil и нулевые значения</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/04-bool-nil-zero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/04-bool-nil-zero/</guid><description>&lt;h2 id="булев-тип" class=link_owner>
  Булев тип
  &lt;a href="#%d0%b1%d1%83%d0%bb%d0%b5%d0%b2-%d1%82%d0%b8%d0%bf" class="link icon">
  &lt;svg>
@@ -453,7 +453,7 @@ GOOS=windows GOARCH=amd64 go build -o app.exe main.go
 &lt;p>&lt;code>nil&lt;/code> — нулевое значение для ссылочных типов: указателей, срезов, карт, каналов, функций, интерфейсов.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">p&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="c1">// p == nil&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">s&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="c1">// s == nil, len(s) == 0&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>nil&lt;/code> — это не &lt;code>0&lt;/code> и не пустая строка. Это отдельное значение для типов, которые «могут отсутствовать».&lt;/p></description></item><item><title>Модули</title><link>https://gotogolang.github.io/exercises/go/chapter-01/04-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-01/04-modules/</guid><description>&lt;h2 id="что-такое-модуль" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>nil&lt;/code> — это не &lt;code>0&lt;/code> и не пустая строка. Это отдельное значение для типов, которые «могут отсутствовать».&lt;/p></description></item><item><title>Модули</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</guid><description>&lt;h2 id="что-такое-модуль" class=link_owner>
  Что такое модуль
  &lt;a href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d1%8c" class="link icon">
  &lt;svg>
@@ -496,7 +496,7 @@ require (
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;code>go.sum&lt;/code> хранит криптографические хэши зависимостей — гарантирует воспроизводимые сборки. Генерируется автоматически; нужно коммитить вместе с &lt;code>go.mod&lt;/code>.&lt;/p></description></item><item><title>Циклы</title><link>https://gotogolang.github.io/exercises/go/chapter-03/04-loops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-03/04-loops/</guid><description>&lt;p>В Go только один вид цикла — &lt;code>for&lt;/code>. Он покрывает все три сценария.&lt;/p>
+&lt;p>&lt;code>go.sum&lt;/code> хранит криптографические хэши зависимостей — гарантирует воспроизводимые сборки. Генерируется автоматически; нужно коммитить вместе с &lt;code>go.mod&lt;/code>.&lt;/p></description></item><item><title>Циклы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/04-loops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/04-loops/</guid><description>&lt;p>В Go только один вид цикла — &lt;code>for&lt;/code>. Он покрывает все три сценария.&lt;/p>
 &lt;h2 id="классический-for" class=link_owner>
  Классический for
  &lt;a href="#%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9-for" class="link icon">
@@ -548,7 +548,7 @@ require (
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">nums&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// только значение&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>При переборе строки &lt;code>range&lt;/code> декодирует байты в руны — корректно для UTF-8.&lt;/p></description></item><item><title>defer</title><link>https://gotogolang.github.io/exercises/go/chapter-03/05-defer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-03/05-defer/</guid><description>&lt;h2 id="отложенный-вызов" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>При переборе строки &lt;code>range&lt;/code> декодирует байты в руны — корректно для UTF-8.&lt;/p></description></item><item><title>defer</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/05-defer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/05-defer/</guid><description>&lt;h2 id="отложенный-вызов" class=link_owner>
  Отложенный вызов
  &lt;a href="#%d0%be%d1%82%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%bd%d1%8b%d0%b9-%d0%b2%d1%8b%d0%b7%d0%be%d0%b2" class="link icon">
  &lt;svg>
@@ -589,7 +589,7 @@ require (
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Аргументы отложенной функции вычисляются &lt;strong>в момент регистрации&lt;/strong> &lt;code>defer&lt;/code>, а не при вызове:&lt;/p></description></item><item><title>Преобразование типов и константы</title><link>https://gotogolang.github.io/exercises/go/chapter-02/05-types-constants/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/exercises/go/chapter-02/05-types-constants/</guid><description>&lt;h2 id="преобразование-типов" class=link_owner>
+&lt;p>Аргументы отложенной функции вычисляются &lt;strong>в момент регистрации&lt;/strong> &lt;code>defer&lt;/code>, а не при вызове:&lt;/p></description></item><item><title>Преобразование типов и константы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/05-types-constants/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/05-types-constants/</guid><description>&lt;h2 id="преобразование-типов" class=link_owner>
  Преобразование типов
  &lt;a href="#%d0%bf%d1%80%d0%b5%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%82%d0%b8%d0%bf%d0%be%d0%b2" class="link icon">
  &lt;svg>
@@ -623,7 +623,52 @@ require (
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Константы объявляются с &lt;code>const&lt;/code> и вычисляются на этапе компиляции:&lt;/p></description></item><item><title>Hello, gotogolang</title><link>https://gotogolang.github.io/blog/hello-gotogolang/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/blog/hello-gotogolang/</guid><description>&lt;p>gotogolang is a platform for practicing algorithms in the browser using a real terminal.&lt;/p>
+&lt;p>Константы объявляются с &lt;code>const&lt;/code> и вычисляются на этапе компиляции:&lt;/p></description></item><item><title>Package mathutils</title><link>https://gotogolang.github.io/go/math-utils/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/math-utils/</guid><description>&lt;p>Build a &lt;code>mathutils&lt;/code> package with three functions over integer slices:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Function&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Max(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>maximum element&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Min(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>minimum element&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Sum(nums []int) int&lt;/code>&lt;/td>
+ &lt;td>sum of elements&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Each function returns &lt;code>0&lt;/code> for an empty slice.&lt;/p>
+&lt;p>Edit &lt;code>mathutils/mathutils.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test ./...&lt;/code> to verify.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-multi-01"
+ data-tps-url="https://api.gotogo.pro">
+ &lt;/script>
+&lt;/div></description></item><item><title>Reverse a String</title><link>https://gotogolang.github.io/go/reverse-string/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/reverse-string/</guid><description>&lt;p>Implement &lt;code>Reverse(s string) string&lt;/code> — returns the string in reverse order.&lt;/p>
+&lt;p>&lt;strong>Examples:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>Reverse(&amp;#34;hello&amp;#34;) → &amp;#34;olleh&amp;#34;
+Reverse(&amp;#34;&amp;#34;) → &amp;#34;&amp;#34;
+Reverse(&amp;#34;racecar&amp;#34;) → &amp;#34;racecar&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Tests are in &lt;code>solution_test.go&lt;/code>. Run &lt;code>check&lt;/code> or &lt;code>go test&lt;/code> to verify.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-func-01"
+ data-tps-url="https://api.gotogo.pro">
+ &lt;/script>
+&lt;/div></description></item><item><title>Hello, gotogolang</title><link>https://gotogolang.github.io/blog/hello-gotogolang/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/blog/hello-gotogolang/</guid><description>&lt;p>gotogolang is a platform for practicing algorithms in the browser using a real terminal.&lt;/p>
 &lt;p>No setup, no local environment. Open a page, get a container running Go, solve a problem in vim.&lt;/p>
 &lt;h2 id="stack" class=link_owner>
  Stack
@@ -652,4 +697,19 @@ require (
 &lt;li>More Go exercises&lt;/li>
 &lt;li>Python support&lt;/li>
 &lt;li>Blog posts on algorithms and Go internals&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Multiplication Table</title><link>https://gotogolang.github.io/go/multiplication-table/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/multiplication-table/</guid><description>&lt;p>Print a 5×5 multiplication table using nested loops.&lt;/p>
+&lt;p>&lt;strong>Format:&lt;/strong> each line is &lt;code>A x B = C&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Example output:&lt;/strong>&lt;/p>
+&lt;pre tabindex="0">&lt;code>1 x 1 = 1
+1 x 2 = 2
+...
+5 x 5 = 25
+&lt;/code>&lt;/pre>&lt;p>Run &lt;code>check&lt;/code> in the terminal to verify your solution.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ data-exercise="go-expr-01"
+ data-tps-url="https://api.gotogo.pro">
+ &lt;/script>
+&lt;/div></description></item></channel></rss>

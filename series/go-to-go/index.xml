@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go-to-Go on GoToGo</title><link>https://gotogolang.github.io/series/go-to-go/</link><description>Recent content in Go-to-Go on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/series/go-to-go/index.xml" rel="self" type="application/rss+xml"/><item><title>Арифметика и присваивание</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/01-arithmetic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/01-arithmetic/</guid><description>&lt;h2 id="арифметические-операторы" class=link_owner>
+ Арифметические операторы
+ &lt;a href="#%d0%b0%d1%80%d0%b8%d1%84%d0%bc%d0%b5%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Оператор&lt;/th>
+ &lt;th>Описание&lt;/th>
+ &lt;th>Пример&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>+&lt;/code>&lt;/td>
+ &lt;td>сложение&lt;/td>
+ &lt;td>&lt;code>a + b&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>-&lt;/code>&lt;/td>
+ &lt;td>вычитание&lt;/td>
+ &lt;td>&lt;code>a - b&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>*&lt;/code>&lt;/td>
+ &lt;td>умножение&lt;/td>
+ &lt;td>&lt;code>a * b&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>/&lt;/code>&lt;/td>
+ &lt;td>деление&lt;/td>
+ &lt;td>&lt;code>a / b&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>%&lt;/code>&lt;/td>
+ &lt;td>остаток от деления&lt;/td>
+ &lt;td>&lt;code>a % b&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Деление целых чисел — целочисленное: &lt;code>7 / 2 == 3&lt;/code>. Для дробного результата нужен &lt;code>float64&lt;/code>.&lt;/p>
+&lt;h2 id="инкремент-и-декремент" class=link_owner>
+ Инкремент и декремент
+ &lt;a href="#%d0%b8%d0%bd%d0%ba%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d1%82-%d0%b8-%d0%b4%d0%b5%d0%ba%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d1%82" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">i&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span> &lt;span class="c1">// i == 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">i&lt;/span>&lt;span class="o">--&lt;/span> &lt;span class="c1">// i == 5&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>++&lt;/code> и &lt;code>--&lt;/code> — операторы-инструкции, а не выражения. Их нельзя использовать в правой части присваивания: &lt;code>j = i++&lt;/code> — ошибка компиляции. Префиксная форма (&lt;code>++i&lt;/code>) в Go отсутствует.&lt;/p></description></item><item><title>Объявление переменных</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</guid><description>&lt;h2 id="var-и-" class=link_owner>
+ var и :=
+ &lt;a href="#var-%d0%b8-" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>В Go есть два способа объявить переменную.&lt;/p>
+&lt;p>&lt;strong>Полная форма — &lt;code>var&lt;/code>:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="kt">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">age&lt;/span> &lt;span class="kt">int&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">pi&lt;/span> &lt;span class="kt">float64&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mf">3.14159&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Короткое объявление — &lt;code>:=&lt;/code>:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">name&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;Alice&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">age&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">30&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">pi&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mf">3.14159&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>:=&lt;/code> работает только внутри функций. &lt;code>var&lt;/code> можно использовать как внутри функций, так и на уровне пакета.&lt;/p>
+&lt;p>Несколько переменных сразу:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">y&lt;/span> &lt;span class="kt">int&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hello&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="именование" class=link_owner>
+ Именование
+ &lt;a href="#%d0%b8%d0%bc%d0%b5%d0%bd%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Go требует &lt;code>camelCase&lt;/code>. Имена с прописной буквы (&lt;code>Name&lt;/code>, &lt;code>Println&lt;/code>) экспортируются из пакета. Имена со строчной (&lt;code>name&lt;/code>, &lt;code>count&lt;/code>) — приватные.&lt;/p></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
+ Краткая история
+ &lt;a href="#%d0%ba%d1%80%d0%b0%d1%82%d0%ba%d0%b0%d1%8f-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Go (неофициально — Golang) — компилируемый статически типизированный язык, созданный в Google в 2007 году. Его авторы — Роберт Гризмер, Роб Пайк и Кен Томпсон. Первый публичный релиз — 2009 год, версия 1.0 — 2012-й.&lt;/p>
+&lt;p>Язык создавался как ответ на реальные проблемы: медленная сборка C++ проектов, сложное управление конкурентностью, перегруженный синтаксис. С версии 1.0 гарантируется обратная совместимость.&lt;/p>
+&lt;h2 id="где-применяется" class=link_owner>
+ Где применяется
+ &lt;a href="#%d0%b3%d0%b4%d0%b5-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%8f%d0%b5%d1%82%d1%81%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Серверные приложения и API&lt;/strong> — в стандартной библиотеке уже есть полноценный HTTP-сервер.&lt;/li>
+&lt;li>&lt;strong>Инфраструктурные инструменты&lt;/strong> — Docker, Kubernetes, Terraform, Consul написаны на Go.&lt;/li>
+&lt;li>&lt;strong>CLI-утилиты&lt;/strong> — Go компилирует в статические бинарники без зависимостей.&lt;/li>
+&lt;/ul>
+&lt;h2 id="ключевые-особенности" class=link_owner>
+ Ключевые особенности
+ &lt;a href="#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;strong>Компиляция в нативный код&lt;/strong> — нет виртуальной машины, нет интерпретатора.&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-go" class=link_owner>
+ Hello, Go!
+ &lt;a href="#hello-go" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, Go!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Разберём построчно:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>package main&lt;/code> — каждый Go-файл объявляет принадлежность к пакету. &lt;code>main&lt;/code> — точка входа в исполняемую программу.&lt;/li>
+&lt;li>&lt;code>import &amp;quot;fmt&amp;quot;&lt;/code> — подключаем стандартный пакет форматированного ввода-вывода.&lt;/li>
+&lt;li>&lt;code>func main()&lt;/code> — вызывается при запуске программы. Нет аргументов, нет возвращаемого значения.&lt;/li>
+&lt;li>&lt;code>fmt.Println(...)&lt;/code> — выводит аргументы в stdout с переводом строки.&lt;/li>
+&lt;/ul>
+&lt;h2 id="пакеты-и-импорт" class=link_owner>
+ Пакеты и импорт
+ &lt;a href="#%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b8-%d0%b8%d0%bc%d0%bf%d0%be%d1%80%d1%82" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Пакет — базовая единица организации кода в Go. Несколько пакетов в одном импорте:&lt;/p></description></item><item><title>Сравнение, логика и биты</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/02-comparison-bitwise/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/02-comparison-bitwise/</guid><description>&lt;h2 id="операторы-сравнения" class=link_owner>
+ Операторы сравнения
+ &lt;a href="#%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b-%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Оператор&lt;/th>
+ &lt;th>Описание&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>==&lt;/code>&lt;/td>
+ &lt;td>равно&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>!=&lt;/code>&lt;/td>
+ &lt;td>не равно&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;lt;&lt;/code>&lt;/td>
+ &lt;td>меньше&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;lt;=&lt;/code>&lt;/td>
+ &lt;td>меньше или равно&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;gt;&lt;/code>&lt;/td>
+ &lt;td>больше&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;gt;=&lt;/code>&lt;/td>
+ &lt;td>больше или равно&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Результат — всегда &lt;code>bool&lt;/code>. Сравнивать можно только значения одного типа.&lt;/p>
+&lt;h2 id="логические-операторы" class=link_owner>
+ Логические операторы
+ &lt;a href="#%d0%bb%d0%be%d0%b3%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Оператор&lt;/th>
+ &lt;th>Описание&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;amp;&amp;amp;&lt;/code>&lt;/td>
+ &lt;td>логическое И&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>||&lt;/code>&lt;/td>
+ &lt;td>логическое ИЛИ&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>!&lt;/code>&lt;/td>
+ &lt;td>логическое отрицание&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>&lt;code>&amp;amp;&amp;amp;&lt;/code> и &lt;code>||&lt;/code> — ленивые вычисления: правый операнд не вычисляется, если результат уже определён левым.&lt;/p>
+&lt;h2 id="побитовые-операторы" class=link_owner>
+ Побитовые операторы
+ &lt;a href="#%d0%bf%d0%be%d0%b1%d0%b8%d1%82%d0%be%d0%b2%d1%8b%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Оператор&lt;/th>
+ &lt;th>Описание&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;amp;&lt;/code>&lt;/td>
+ &lt;td>побитовое И&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>|&lt;/code>&lt;/td>
+ &lt;td>побитовое ИЛИ&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>^&lt;/code>&lt;/td>
+ &lt;td>XOR / унарный NOT&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;amp;^&lt;/code>&lt;/td>
+ &lt;td>AND NOT (bit clear)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;lt;&amp;lt;&lt;/code>&lt;/td>
+ &lt;td>сдвиг влево&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;gt;&amp;gt;&lt;/code>&lt;/td>
+ &lt;td>сдвиг вправо&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mb">0b1100&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="mb">0b1010&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 8 (0b1000)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 8&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 4&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="приоритет-операторов" class=link_owner>
+ Приоритет операторов
+ &lt;a href="#%d0%bf%d1%80%d0%b8%d0%be%d1%80%d0%b8%d1%82%d0%b5%d1%82-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d0%be%d0%b2" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;pre tabindex="0">&lt;code>* / % &amp;lt;&amp;lt; &amp;gt;&amp;gt; &amp;amp; &amp;amp;^
++ - | ^
+== != &amp;lt; &amp;lt;= &amp;gt; &amp;gt;=
+&amp;amp;&amp;amp;
+||
+&lt;/code>&lt;/pre>&lt;p>При сомнениях используйте скобки.&lt;/p></description></item><item><title>Числовые типы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/02-numeric-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/02-numeric-types/</guid><description>&lt;h2 id="целочисленные-типы" class=link_owner>
+ Целочисленные типы
+ &lt;a href="#%d1%86%d0%b5%d0%bb%d0%be%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5-%d1%82%d0%b8%d0%bf%d1%8b" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Тип&lt;/th>
+ &lt;th>Размер&lt;/th>
+ &lt;th>Диапазон&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>int&lt;/code>&lt;/td>
+ &lt;td>32 или 64 бита&lt;/td>
+ &lt;td>зависит от платформы&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>int8&lt;/code>&lt;/td>
+ &lt;td>8 бит&lt;/td>
+ &lt;td>−128 … 127&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>int16&lt;/code>&lt;/td>
+ &lt;td>16 бит&lt;/td>
+ &lt;td>−32 768 … 32 767&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>int32&lt;/code>&lt;/td>
+ &lt;td>32 бита&lt;/td>
+ &lt;td>−2 147 483 648 … 2 147 483 647&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>int64&lt;/code>&lt;/td>
+ &lt;td>64 бита&lt;/td>
+ &lt;td>−9.2×10¹⁸ … 9.2×10¹⁸&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>uint8&lt;/code>&lt;/td>
+ &lt;td>8 бит&lt;/td>
+ &lt;td>0 … 255&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>uint16&lt;/code>&lt;/td>
+ &lt;td>16 бит&lt;/td>
+ &lt;td>0 … 65 535&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>uint32&lt;/code>&lt;/td>
+ &lt;td>32 бита&lt;/td>
+ &lt;td>0 … 4 294 967 295&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>uint64&lt;/code>&lt;/td>
+ &lt;td>64 бита&lt;/td>
+ &lt;td>0 … 1.8×10¹⁹&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>uintptr&lt;/code>&lt;/td>
+ &lt;td>32 или 64 бита&lt;/td>
+ &lt;td>для хранения адреса памяти&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Для большинства задач используйте &lt;code>int&lt;/code> — «естественный» целочисленный тип Go.&lt;/p></description></item><item><title>Компиляция и сборка</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</guid><description>&lt;h2 id="основные-команды" class=link_owner>
+ Основные команды
+ &lt;a href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;pre tabindex="0">&lt;code>go run main.go # скомпилировать и сразу запустить
+go build main.go # скомпилировать → бинарник ./main
+go build -o app main.go # бинарник с заданным именем
+&lt;/code>&lt;/pre>&lt;p>&lt;code>go run&lt;/code> компилирует и запускает без промежуточных файлов — удобно при разработке.
+&lt;code>go build&lt;/code> создаёт бинарник для деплоя: один файл, нет зависимостей.&lt;/p>
+&lt;h2 id="кросс-компиляция" class=link_owner>
+ Кросс-компиляция
+ &lt;a href="#%d0%ba%d1%80%d0%be%d1%81%d1%81-%d0%ba%d0%be%d0%bc%d0%bf%d0%b8%d0%bb%d1%8f%d1%86%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Go поддерживает сборку под другие платформы без дополнительных инструментов:&lt;/p>
+&lt;pre tabindex="0">&lt;code>GOOS=linux GOARCH=amd64 go build -o app-linux main.go
+GOOS=darwin GOARCH=arm64 go build -o app-mac main.go
+GOOS=windows GOARCH=amd64 go build -o app.exe main.go
+&lt;/code>&lt;/pre>&lt;p>&lt;code>GOOS&lt;/code> — целевая ОС, &lt;code>GOARCH&lt;/code> — архитектура процессора.&lt;/p></description></item><item><title>Строки и символы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/03-strings-runes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/03-strings-runes/</guid><description>&lt;h2 id="строки" class=link_owner>
+ Строки
+ &lt;a href="#%d1%81%d1%82%d1%80%d0%be%d0%ba%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">greeting&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;Hello, Go!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">multi&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;первая строка\nвторая строка&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">raw&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">`путь: C:\Users\name`&lt;/span> &lt;span class="c1">// raw-строка, без escape-последовательностей&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Строки в Go — &lt;strong>неизменяемые&lt;/strong> последовательности байт в кодировке UTF-8. Конкатенация — оператором &lt;code>+&lt;/code>.&lt;/p>
+&lt;p>&lt;code>len(s)&lt;/code> возвращает длину в &lt;strong>байтах&lt;/strong>, а не в символах. Для многобайтовых символов (кириллица, CJK) это важно: &lt;code>len(&amp;quot;Привет&amp;quot;) == 12&lt;/code>, а не 6.&lt;/p>
+&lt;h2 id="rune" class=link_owner>
+ Rune
+ &lt;a href="#rune" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;code>rune&lt;/code> — псевдоним для &lt;code>int32&lt;/code>, представляет один Unicode code point (символ).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">r&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="sc">&amp;#39;А&amp;#39;&lt;/span> &lt;span class="c1">// тип rune, значение 1040&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">string&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1">// &amp;#34;А&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Одинарные кавычки — для &lt;code>rune&lt;/code>, двойные — для &lt;code>string&lt;/code>.&lt;/p></description></item><item><title>Условные конструкции</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/03-conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/03-conditions/</guid><description>&lt;h2 id="if--else" class=link_owner>
+ if / else
+ &lt;a href="#if--else" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;положительное&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;отрицательное&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ноль&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Фигурные скобки обязательны. Скобки вокруг условия не нужны.&lt;/p>
+&lt;p>&lt;strong>Инициализатор в &lt;code>if&lt;/code>:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nf">doSomething&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ошибка:&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Переменная &lt;code>err&lt;/code> видна только внутри блока &lt;code>if/else&lt;/code>. Этот паттерн повсеместно используется при обработке ошибок в Go.&lt;/p>
+&lt;h2 id="switch" class=link_owner>
+ switch
+ &lt;a href="#switch" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="k">switch&lt;/span> &lt;span class="nx">day&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">case&lt;/span> &lt;span class="s">&amp;#34;Monday&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Tuesday&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Wednesday&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;начало недели&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">case&lt;/span> &lt;span class="s">&amp;#34;Thursday&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Friday&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;конец недели&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">default&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;выходной&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>switch&lt;/code> не требует &lt;code>break&lt;/code> — каждый &lt;code>case&lt;/code> завершается автоматически. Для «провала» в следующий &lt;code>case&lt;/code> — &lt;code>fallthrough&lt;/code>.&lt;/p></description></item><item><title>Bool, nil и нулевые значения</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/04-bool-nil-zero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/04-bool-nil-zero/</guid><description>&lt;h2 id="булев-тип" class=link_owner>
+ Булев тип
+ &lt;a href="#%d0%b1%d1%83%d0%bb%d0%b5%d0%b2-%d1%82%d0%b8%d0%bf" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">active&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">done&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>bool&lt;/code> принимает ровно два значения: &lt;code>true&lt;/code> и &lt;code>false&lt;/code>. В Go нет «truthy/falsy» — целое число не конвертируется в &lt;code>bool&lt;/code> неявно.&lt;/p>
+&lt;h2 id="nil" class=link_owner>
+ nil
+ &lt;a href="#nil" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;code>nil&lt;/code> — нулевое значение для ссылочных типов: указателей, срезов, карт, каналов, функций, интерфейсов.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">p&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="c1">// p == nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">s&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="c1">// s == nil, len(s) == 0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>nil&lt;/code> — это не &lt;code>0&lt;/code> и не пустая строка. Это отдельное значение для типов, которые «могут отсутствовать».&lt;/p></description></item><item><title>Модули</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</guid><description>&lt;h2 id="что-такое-модуль" class=link_owner>
+ Что такое модуль
+ &lt;a href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d1%8c" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Модуль — проект Go, объявленный в файле &lt;code>go.mod&lt;/code>. Содержит имя модуля и список зависимостей.&lt;/p>
+&lt;pre tabindex="0">&lt;code>myapp/
+├── go.mod
+├── go.sum
+└── main.go
+&lt;/code>&lt;/pre>&lt;p>Инициализировать модуль:&lt;/p>
+&lt;pre tabindex="0">&lt;code>go mod init github.com/user/myapp
+&lt;/code>&lt;/pre>&lt;h2 id="gomod" class=link_owner>
+ go.mod
+ &lt;a href="#gomod" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;pre tabindex="0">&lt;code>module github.com/user/myapp
+
+go 1.23
+
+require (
+ github.com/some/package v1.2.3
+)
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>&lt;code>module&lt;/code> — уникальное имя модуля (обычно путь к репозиторию).&lt;/li>
+&lt;li>&lt;code>go&lt;/code> — минимальная версия компилятора.&lt;/li>
+&lt;li>&lt;code>require&lt;/code> — зависимости с фиксированными версиями.&lt;/li>
+&lt;/ul>
+&lt;h2 id="gosum" class=link_owner>
+ go.sum
+ &lt;a href="#gosum" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;code>go.sum&lt;/code> хранит криптографические хэши зависимостей — гарантирует воспроизводимые сборки. Генерируется автоматически; нужно коммитить вместе с &lt;code>go.mod&lt;/code>.&lt;/p></description></item><item><title>Циклы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/04-loops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/04-loops/</guid><description>&lt;p>В Go только один вид цикла — &lt;code>for&lt;/code>. Он покрывает все три сценария.&lt;/p>
+&lt;h2 id="классический-for" class=link_owner>
+ Классический for
+ &lt;a href="#%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9-for" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="цикл-while" class=link_owner>
+ Цикл-while
+ &lt;a href="#%d1%86%d0%b8%d0%ba%d0%bb-while" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="mi">100&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">n&lt;/span> &lt;span class="o">*=&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="бесконечный-цикл" class=link_owner>
+ Бесконечный цикл
+ &lt;a href="#%d0%b1%d0%b5%d1%81%d0%ba%d0%be%d0%bd%d0%b5%d1%87%d0%bd%d1%8b%d0%b9-%d1%86%d0%b8%d0%ba%d0%bb" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// выход через break или return&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="range" class=link_owner>
+ range
+ &lt;a href="#range" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;code>range&lt;/code> перебирает коллекции: срезы, строки, карты, каналы.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">nums&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">nums&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// индекс и значение&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">nums&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// только значение&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>При переборе строки &lt;code>range&lt;/code> декодирует байты в руны — корректно для UTF-8.&lt;/p></description></item><item><title>defer</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-03/05-defer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-03/05-defer/</guid><description>&lt;h2 id="отложенный-вызов" class=link_owner>
+ Отложенный вызов
+ &lt;a href="#%d0%be%d1%82%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%bd%d1%8b%d0%b9-%d0%b2%d1%8b%d0%b7%d0%be%d0%b2" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;code>defer&lt;/code> откладывает выполнение функции до возврата из текущей функции:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">readFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="kt">string&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">f&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">_&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">defer&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Close&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1">// выполнится при выходе из readFile&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// работа с файлом&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Ресурс открыт и сразу «подстрахован» — независимо от того, сколько путей выхода из функции.&lt;/p>
+&lt;h2 id="lifo" class=link_owner>
+ LIFO
+ &lt;a href="#lifo" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Несколько &lt;code>defer&lt;/code> выполняются в порядке LIFO — последний зарегистрированный вызывается первым:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">defer&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;третий&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">defer&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;второй&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">defer&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;первый&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// первый&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// второй&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// третий&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="вычисление-аргументов" class=link_owner>
+ Вычисление аргументов
+ &lt;a href="#%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b0%d1%80%d0%b3%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Аргументы отложенной функции вычисляются &lt;strong>в момент регистрации&lt;/strong> &lt;code>defer&lt;/code>, а не при вызове:&lt;/p></description></item><item><title>Преобразование типов и константы</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/05-types-constants/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/05-types-constants/</guid><description>&lt;h2 id="преобразование-типов" class=link_owner>
+ Преобразование типов
+ &lt;a href="#%d0%bf%d1%80%d0%b5%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%82%d0%b8%d0%bf%d0%be%d0%b2" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>В Go нет неявных преобразований — только явные:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">42&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">f&lt;/span> &lt;span class="kt">float64&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">float64&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">u&lt;/span> &lt;span class="kt">uint&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">uint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">f&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Попытка присвоить &lt;code>int&lt;/code> переменной &lt;code>float64&lt;/code> без явного преобразования — ошибка компиляции. Это защищает от скрытых потерь точности.&lt;/p>
+&lt;h2 id="вывод-типов" class=link_owner>
+ Вывод типов
+ &lt;a href="#%d0%b2%d1%8b%d0%b2%d0%be%d0%b4-%d1%82%d0%b8%d0%bf%d0%be%d0%b2" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Компилятор выводит тип из правой части при &lt;code>:=&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">i&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">42&lt;/span> &lt;span class="c1">// int&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">f&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mf">3.14&lt;/span> &lt;span class="c1">// float64&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">c&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="m">2i&lt;/span> &lt;span class="c1">// complex128&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">s&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;hello&amp;#34;&lt;/span> &lt;span class="c1">// string&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="константы" class=link_owner>
+ Константы
+ &lt;a href="#%d0%ba%d0%be%d0%bd%d1%81%d1%82%d0%b0%d0%bd%d1%82%d1%8b" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Константы объявляются с &lt;code>const&lt;/code> и вычисляются на этапе компиляции:&lt;/p></description></item></channel></rss>
