@@ -45,6 +45,75 @@ code, pre {
 .badge-hard   { color: #ef476f; }
 
 /* ------------------------------------------------------------------ */
+/*  Go! exercises table                                               */
+/* ------------------------------------------------------------------ */
+
+.exercises-heading {
+  margin-bottom: 0.25rem;
+}
+
+.exercises-intro {
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+  font-size: 0.92rem;
+}
+
+.exercises-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.exercises-table th {
+  text-align: left;
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.exercises-table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.exercises-table tbody tr:hover td {
+  background: rgba(0, 255, 136, 0.04);
+}
+
+.exercises-table__num {
+  color: var(--color-accent);
+  opacity: 0.4;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  width: 2.5rem;
+}
+
+.exercises-table__title a {
+  color: var(--color-fg);
+  font-weight: 500;
+}
+.exercises-table__title a:hover {
+  color: var(--color-accent);
+}
+
+.ex-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  color: var(--color-fg);
+  opacity: 0.6;
+  margin-right: 3px;
+}
+
+/* ------------------------------------------------------------------ */
 /*  TL;DR summary shortcode                                           */
 /* ------------------------------------------------------------------ */
 
