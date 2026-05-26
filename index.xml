@@ -1329,16 +1329,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Срез (&lt;code>[]T&lt;/code>) и карта (&lt;code>map[K]V&lt;/code>) внутри содержат указатель на данные. При передаче в функцию копируется заголовок (pointer + len + cap), но данные — общие:&lt;/p></description></item><item><title>Практические задания</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</guid><description>&lt;p>В этой главе вас ждёт одно практическое упражнение в конце главы.&lt;/p>
-&lt;p>Текст о порядке работы с платформой появится здесь позже.&lt;/p>
-&lt;div class="goalgo-terminal-wrap">
- &lt;script
- src="https://gotogolang.github.io/widget.js"
- data-pack="go"
- 
- data-tps-url="https://api.gotogo.pro">
- &lt;/script>
-&lt;/div></description></item><item><title>Сбалансированные деревья: AVL и Red-Black</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</guid><description>&lt;h2 id="проблема-несбалансированности" class=link_owner>
+&lt;p>Срез (&lt;code>[]T&lt;/code>) и карта (&lt;code>map[K]V&lt;/code>) внутри содержат указатель на данные. При передаче в функцию копируется заголовок (pointer + len + cap), но данные — общие:&lt;/p></description></item><item><title>Сбалансированные деревья: AVL и Red-Black</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</guid><description>&lt;h2 id="проблема-несбалансированности" class=link_owner>
  Проблема несбалансированности
  &lt;a href="#%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d0%b0-%d0%bd%d0%b5%d1%81%d0%b1%d0%b0%d0%bb%d0%b0%d0%bd%d1%81%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
  &lt;svg>

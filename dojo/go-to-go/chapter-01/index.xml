@@ -35,16 +35,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Теоретическая часть изложена в сжатом виде и носит краткий, справочный характер. Некоторые темы намеренно усечены или исключены из рассмотрения — чтобы не перегружать информацией и дать объём знаний, минимально необходимый для выполнения практических заданий. За дополнительной информацией всегда можно обратиться к официальной документации.&lt;/p></description></item><item><title>Практические задания</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</guid><description>&lt;p>В этой главе вас ждёт одно практическое упражнение в конце главы.&lt;/p>
-&lt;p>Текст о порядке работы с платформой появится здесь позже.&lt;/p>
-&lt;div class="goalgo-terminal-wrap">
- &lt;script
- src="https://gotogolang.github.io/widget.js"
- data-pack="go"
- 
- data-tps-url="https://api.gotogo.pro">
- &lt;/script>
-&lt;/div></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
+&lt;p>Теоретическая часть изложена в сжатом виде и носит краткий, справочный характер. Некоторые темы намеренно усечены или исключены из рассмотрения — чтобы не перегружать информацией и дать объём знаний, минимально необходимый для выполнения практических заданий. За дополнительной информацией всегда можно обратиться к официальной документации.&lt;/p></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
  Краткая история
  &lt;a href="#%d0%ba%d1%80%d0%b0%d1%82%d0%ba%d0%b0%d1%8f-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f" class="link icon">
  &lt;svg>
