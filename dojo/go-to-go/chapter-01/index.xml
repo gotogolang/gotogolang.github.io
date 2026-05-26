@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 1. Введение в Go on GoToGo</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/</link><description>Recent content in Глава 1. Введение в Go on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/dojo/go-to-go/chapter-01/index.xml" rel="self" type="application/rss+xml"/><item><title>О курсе</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</guid><description>&lt;p>Данный курс разработан как начальный этап изучения Go (Golang) и нацелен на практическое закрепление базовых знаний перед погружением в более глубокие аспекты языка.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 1. Введение в Go on GoToGo</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/</link><description>Recent content in Глава 1. Введение в Go on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/dojo/go-to-go/chapter-01/index.xml" rel="self" type="application/rss+xml"/><item><title>Предисловие</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</guid><description>&lt;p>Курс &lt;strong>&amp;quot;Goto Go!&amp;quot;&lt;/strong> разработан как начальный этап изучения Go (Golang) и нацелен на практическое закрепление базовых знаний перед погружением в более глубокие аспекты языка.&lt;/p>
 &lt;h2 id="для-кого-этот-курс" class=link_owner>
  Для кого этот курс
  &lt;a href="#%d0%b4%d0%bb%d1%8f-%d0%ba%d0%be%d0%b3%d0%be-%d1%8d%d1%82%d0%be%d1%82-%d0%ba%d1%83%d1%80%d1%81" class="link icon">
@@ -7,7 +7,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Курс рассчитан на тех, кто уже имеет базовые знания программирования и опыт работы с командной строкой. Прохождение курса не требует установки программного обеспечения: вам потребуется лишь подключение к сети Интернет и один из современных браузеров.&lt;/p>
+&lt;p>Курс рассчитан на тех, кто уже имеет базовые познания в программировании и опыт работы с командной строкой. Прохождение курса не требует установки программного обеспечения: вам потребуется лишь подключение к Интернет и любой из современных браузеров.&lt;/p>
 &lt;h2 id="программа-курса" class=link_owner>
  Программа курса
  &lt;a href="#%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d0%b0-%d0%ba%d1%83%d1%80%d1%81%d0%b0" class="link icon">
@@ -27,9 +27,9 @@
 &lt;li>Основы объектно-ориентированного программирования&lt;/li>
 &lt;li>Обобщённые типы данных&lt;/li>
 &lt;/ul>
-&lt;h2 id="подход-к-изложению" class=link_owner>
- Подход к изложению
- &lt;a href="#%d0%bf%d0%be%d0%b4%d1%85%d0%be%d0%b4-%d0%ba-%d0%b8%d0%b7%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8e" class="link icon">
+&lt;h2 id="особенности-курса" class=link_owner>
+ Особенности курса
+ &lt;a href="#%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%b0" class="link icon">
  &lt;svg>
  &lt;use xlink:href="#anchor-link">&lt;/use>
  &lt;/svg>
