@@ -1369,25 +1369,13 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Разберём, что здесь происходит, построчно.&lt;/p>
-&lt;h3 id="package-main" class=link_owner>
- &lt;code>package main&lt;/code>
- &lt;a href="#package-main" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h3>
-&lt;p>В начале каждого Go-файла объявляется принадлежность к пакету. Для запуска приложения обязательно наличие пакета с именем &lt;code>main&lt;/code>.&lt;/p>
-&lt;h3 id="import-fmt" class=link_owner>
- &lt;code>import &amp;quot;fmt&amp;quot;&lt;/code>
- &lt;a href="#import-fmt" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h3>
-&lt;p>После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item><item><title>Циклы</title><link>https://gotogolang.github.io/go/go-to-go/chapter-03/04-loops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-03/04-loops/</guid><description>&lt;p>В Go только один вид цикла — &lt;code>for&lt;/code>. Он покрывает все три сценария.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Сначала разберём, что здесь происходит, построчно.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>package main&lt;/code> В начале каждого Go-файла объявляется принадлежность к пакету. Для запуска приложения обязательно наличие пакета с именем &lt;code>main&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>import &amp;quot;fmt&amp;quot;&lt;/code> После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item><item><title>Циклы</title><link>https://gotogolang.github.io/go/go-to-go/chapter-03/04-loops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-03/04-loops/</guid><description>&lt;p>В Go только один вид цикла — &lt;code>for&lt;/code>. Он покрывает все три сценария.&lt;/p>
 &lt;h2 id="классический-for" class=link_owner>
  Классический for
  &lt;a href="#%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9-for" class="link icon">
