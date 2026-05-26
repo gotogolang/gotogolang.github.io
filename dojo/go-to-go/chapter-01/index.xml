@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 1. Введение в Go on GoToGo</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/</link><description>Recent content in Глава 1. Введение в Go on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/dojo/go-to-go/chapter-01/index.xml" rel="self" type="application/rss+xml"/><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 1. Введение в Go on GoToGo</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/</link><description>Recent content in Глава 1. Введение в Go on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/dojo/go-to-go/chapter-01/index.xml" rel="self" type="application/rss+xml"/><item><title>О курсе</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</guid><description>&lt;p>Данный курс разработан как начальный этап изучения Go (Golang) и нацелен на практическое закрепление базовых знаний перед погружением в более глубокие аспекты языка.&lt;/p>
+&lt;h2 id="для-кого-этот-курс" class=link_owner>
+ Для кого этот курс
+ &lt;a href="#%d0%b4%d0%bb%d1%8f-%d0%ba%d0%be%d0%b3%d0%be-%d1%8d%d1%82%d0%be%d1%82-%d0%ba%d1%83%d1%80%d1%81" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Курс рассчитан на тех, кто уже имеет базовые знания программирования и опыт работы с командной строкой. Прохождение курса не требует установки программного обеспечения: вам потребуется лишь подключение к сети Интернет и один из современных браузеров.&lt;/p>
+&lt;h2 id="программа-курса" class=link_owner>
+ Программа курса
+ &lt;a href="#%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d0%b0-%d0%ba%d1%83%d1%80%d1%81%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Примитивные типы данных&lt;/li>
+&lt;li>Операторы и выражения&lt;/li>
+&lt;li>Объявление переменных&lt;/li>
+&lt;li>Ветвления и циклы&lt;/li>
+&lt;li>Встроенные структуры данных — массивы, срезы, карты&lt;/li>
+&lt;li>Работа с указателями&lt;/li>
+&lt;li>Основы функционального программирования&lt;/li>
+&lt;li>Основы объектно-ориентированного программирования&lt;/li>
+&lt;li>Обобщённые типы данных&lt;/li>
+&lt;/ul>
+&lt;h2 id="подход-к-изложению" class=link_owner>
+ Подход к изложению
+ &lt;a href="#%d0%bf%d0%be%d0%b4%d1%85%d0%be%d0%b4-%d0%ba-%d0%b8%d0%b7%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8e" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Теоретическая часть изложена в сжатом виде и носит краткий, справочный характер. Некоторые темы намеренно усечены или исключены из рассмотрения — чтобы не перегружать информацией и дать объём знаний, минимально необходимый для выполнения практических заданий. За дополнительной информацией всегда можно обратиться к официальной документации.&lt;/p></description></item><item><title>Практические задания</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</guid><description>&lt;p>В этой главе вас ждёт одно практическое упражнение в конце главы.&lt;/p>
+&lt;p>Текст о порядке работы с платформой появится здесь позже.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ 
+ data-tps-url="https://api.gotogo.pro">
+ &lt;/script>
+&lt;/div></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
  Краткая история
  &lt;a href="#%d0%ba%d1%80%d0%b0%d1%82%d0%ba%d0%b0%d1%8f-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f" class="link icon">
  &lt;svg>
@@ -63,86 +109,4 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h3>
-&lt;p>После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item><item><title>Компиляция и сборка</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</guid><description>&lt;h2 id="основные-команды" class=link_owner>
- Основные команды
- &lt;a href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;pre tabindex="0">&lt;code>go run main.go # скомпилировать и сразу запустить
-go build main.go # скомпилировать → бинарник ./main
-go build -o app main.go # бинарник с заданным именем
-&lt;/code>&lt;/pre>&lt;p>&lt;code>go run&lt;/code> компилирует и запускает без промежуточных файлов — удобно при разработке.
-&lt;code>go build&lt;/code> создаёт бинарник для деплоя: один файл, нет зависимостей.&lt;/p>
-&lt;h2 id="кросс-компиляция" class=link_owner>
- Кросс-компиляция
- &lt;a href="#%d0%ba%d1%80%d0%be%d1%81%d1%81-%d0%ba%d0%be%d0%bc%d0%bf%d0%b8%d0%bb%d1%8f%d1%86%d0%b8%d1%8f" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>Go поддерживает сборку под другие платформы без дополнительных инструментов:&lt;/p>
-&lt;pre tabindex="0">&lt;code>GOOS=linux GOARCH=amd64 go build -o app-linux main.go
-GOOS=darwin GOARCH=arm64 go build -o app-mac main.go
-GOOS=windows GOARCH=amd64 go build -o app.exe main.go
-&lt;/code>&lt;/pre>&lt;p>&lt;code>GOOS&lt;/code> — целевая ОС, &lt;code>GOARCH&lt;/code> — архитектура процессора.&lt;/p></description></item><item><title>Модули</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</guid><description>&lt;h2 id="что-такое-модуль" class=link_owner>
- Что такое модуль
- &lt;a href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d1%8c" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>Модуль — проект Go, объявленный в файле &lt;code>go.mod&lt;/code>. Содержит имя модуля и список зависимостей.&lt;/p>
-&lt;pre tabindex="0">&lt;code>myapp/
-├── go.mod
-├── go.sum
-└── main.go
-&lt;/code>&lt;/pre>&lt;p>Инициализировать модуль:&lt;/p>
-&lt;pre tabindex="0">&lt;code>go mod init github.com/user/myapp
-&lt;/code>&lt;/pre>&lt;h2 id="gomod" class=link_owner>
- go.mod
- &lt;a href="#gomod" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;pre tabindex="0">&lt;code>module github.com/user/myapp
-
-go 1.23
-
-require (
- github.com/some/package v1.2.3
-)
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>&lt;code>module&lt;/code> — уникальное имя модуля (обычно путь к репозиторию).&lt;/li>
-&lt;li>&lt;code>go&lt;/code> — минимальная версия компилятора.&lt;/li>
-&lt;li>&lt;code>require&lt;/code> — зависимости с фиксированными версиями.&lt;/li>
-&lt;/ul>
-&lt;h2 id="gosum" class=link_owner>
- go.sum
- &lt;a href="#gosum" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>&lt;code>go.sum&lt;/code> хранит криптографические хэши зависимостей — гарантирует воспроизводимые сборки. Генерируется автоматически; нужно коммитить вместе с &lt;code>go.mod&lt;/code>.&lt;/p></description></item><item><title>О курсе</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</guid><description>&lt;p>Данный курс разработан как начальный этап изучения Go (Golang) и нацелен на практическое закрепление базовых знаний перед погружением в более глубокие аспекты языка.&lt;/p>
-&lt;p>Курс рассчитан на тех, кто уже имеет базовые знания программирования и опыт работы с командной строкой. Прохождение курса не требует установки программного обеспечения на ваш ноутбук или компьютер: вам потребуется лишь подключение к сети Интернет и один из современных браузеров.&lt;/p>
-&lt;p>Программа курса охватывает:&lt;/p>
-&lt;ul>
-&lt;li>примитивные типы данных,&lt;/li>
-&lt;li>операторы и выражения,&lt;/li>
-&lt;li>объявление переменных,&lt;/li>
-&lt;li>ветвления и циклы,&lt;/li>
-&lt;li>встроенные структуры данных (массивы, срезы, карты),&lt;/li>
-&lt;li>работу с указателями,&lt;/li>
-&lt;li>основы функционального программирования,&lt;/li>
-&lt;li>основы объектно-ориентированного программирования,&lt;/li>
-&lt;li>обобщенные типы данных.&lt;/li>
-&lt;/ul>
-&lt;p>Теоретическая часть изложена в сжатом виде и имеет краткий, справочный характер. Некоторые из базовых тем усечены или исключены из рассмотрения. Это сделано намеренно, чтобы не перегружая информацией дать объем знаний минимально необходимый для выполнения практических заданий и упражнений. За дополнительной информацией всегда можно обратиться к официальной документации.&lt;/p></description></item></channel></rss>
+&lt;p>После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item></channel></rss>

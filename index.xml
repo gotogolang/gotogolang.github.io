@@ -220,7 +220,44 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Срез — &lt;strong>дескриптор&lt;/strong> для сегмента массива: три поля &lt;code>(ptr, len, cap)&lt;/code>.&lt;/p></description></item><item><title>Объявление переменных</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</guid><description>&lt;h2 id="var-и-" class=link_owner>
+&lt;p>Срез — &lt;strong>дескриптор&lt;/strong> для сегмента массива: три поля &lt;code>(ptr, len, cap)&lt;/code>.&lt;/p></description></item><item><title>О курсе</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</guid><description>&lt;p>Данный курс разработан как начальный этап изучения Go (Golang) и нацелен на практическое закрепление базовых знаний перед погружением в более глубокие аспекты языка.&lt;/p>
+&lt;h2 id="для-кого-этот-курс" class=link_owner>
+ Для кого этот курс
+ &lt;a href="#%d0%b4%d0%bb%d1%8f-%d0%ba%d0%be%d0%b3%d0%be-%d1%8d%d1%82%d0%be%d1%82-%d0%ba%d1%83%d1%80%d1%81" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Курс рассчитан на тех, кто уже имеет базовые знания программирования и опыт работы с командной строкой. Прохождение курса не требует установки программного обеспечения: вам потребуется лишь подключение к сети Интернет и один из современных браузеров.&lt;/p>
+&lt;h2 id="программа-курса" class=link_owner>
+ Программа курса
+ &lt;a href="#%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d0%b0-%d0%ba%d1%83%d1%80%d1%81%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Примитивные типы данных&lt;/li>
+&lt;li>Операторы и выражения&lt;/li>
+&lt;li>Объявление переменных&lt;/li>
+&lt;li>Ветвления и циклы&lt;/li>
+&lt;li>Встроенные структуры данных — массивы, срезы, карты&lt;/li>
+&lt;li>Работа с указателями&lt;/li>
+&lt;li>Основы функционального программирования&lt;/li>
+&lt;li>Основы объектно-ориентированного программирования&lt;/li>
+&lt;li>Обобщённые типы данных&lt;/li>
+&lt;/ul>
+&lt;h2 id="подход-к-изложению" class=link_owner>
+ Подход к изложению
+ &lt;a href="#%d0%bf%d0%be%d0%b4%d1%85%d0%be%d0%b4-%d0%ba-%d0%b8%d0%b7%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8e" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Теоретическая часть изложена в сжатом виде и носит краткий, справочный характер. Некоторые темы намеренно усечены или исключены из рассмотрения — чтобы не перегружать информацией и дать объём знаний, минимально необходимый для выполнения практических заданий. За дополнительной информацией всегда можно обратиться к официальной документации.&lt;/p></description></item><item><title>Объявление переменных</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-02/01-variables/</guid><description>&lt;h2 id="var-и-" class=link_owner>
  var и :=
  &lt;a href="#var-%d0%b8-" class="link icon">
  &lt;svg>
@@ -647,38 +684,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h3>
-&lt;p>Каждая ячейка хранит связный список элементов с одинаковым хешем.&lt;/p></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
- Краткая история
- &lt;a href="#%d0%ba%d1%80%d0%b0%d1%82%d0%ba%d0%b0%d1%8f-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>Go (неофициально — Golang) — компилируемый статически типизированный язык, созданный в Google в 2007 году. Его авторы — Роберт Гризмер, Роб Пайк и Кен Томпсон. Первый публичный релиз — 2009 год, версия 1.0 — 2012-й.&lt;/p>
-&lt;p>Язык создавался как ответ на реальные проблемы: медленная сборка C++ проектов, сложное управление конкурентностью, перегруженный синтаксис. С версии 1.0 гарантируется обратная совместимость.&lt;/p>
-&lt;h2 id="где-применяется" class=link_owner>
- Где применяется
- &lt;a href="#%d0%b3%d0%b4%d0%b5-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%8f%d0%b5%d1%82%d1%81%d1%8f" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Серверные приложения и API&lt;/strong> — в стандартной библиотеке уже есть полноценный HTTP-сервер.&lt;/li>
-&lt;li>&lt;strong>Инфраструктурные инструменты&lt;/strong> — Docker, Kubernetes, Terraform, Consul написаны на Go.&lt;/li>
-&lt;li>&lt;strong>CLI-утилиты&lt;/strong> — Go компилирует в статические бинарники без зависимостей.&lt;/li>
-&lt;/ul>
-&lt;h2 id="ключевые-особенности" class=link_owner>
- Ключевые особенности
- &lt;a href="#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>&lt;strong>Компиляция в нативный код&lt;/strong> — нет виртуальной машины, нет интерпретатора.&lt;/p></description></item><item><title>Анонимные функции и замыкания</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-07/02-closures/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-07/02-closures/</guid><description>&lt;h2 id="анонимная-функция" class=link_owner>
+&lt;p>Каждая ячейка хранит связный список элементов с одинаковым хешем.&lt;/p></description></item><item><title>Анонимные функции и замыкания</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-07/02-closures/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-07/02-closures/</guid><description>&lt;h2 id="анонимная-функция" class=link_owner>
  Анонимная функция
  &lt;a href="#%d0%b0%d0%bd%d0%be%d0%bd%d0%b8%d0%bc%d0%bd%d0%b0%d1%8f-%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d1%8f" class="link icon">
  &lt;svg>
@@ -1283,41 +1289,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// cap: 0→1, 1→2, 2→4, 4→8&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Стратегия удвоения даёт амортизированную стоимость &lt;code>O(1)&lt;/code> на один &lt;code>append&lt;/code>.&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-world" class=link_owner>
- Hello, World!
- &lt;a href="#hello-world" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>Давайте рассмотрим основные элементы синтаксиса языка на примере простой программы:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Разберём, что здесь происходит, построчно.&lt;/p>
-&lt;h3 id="package-main" class=link_owner>
- &lt;code>package main&lt;/code>
- &lt;a href="#package-main" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h3>
-&lt;p>В начале каждого Go-файла объявляется принадлежность к пакету. Для запуска приложения обязательно наличие пакета с именем &lt;code>main&lt;/code>.&lt;/p>
-&lt;h3 id="import-fmt" class=link_owner>
- &lt;code>import &amp;quot;fmt&amp;quot;&lt;/code>
- &lt;a href="#import-fmt" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h3>
-&lt;p>После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item><item><title>Передача по значению и по указателю</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</guid><description>&lt;h2 id="по-умолчанию--копия" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Стратегия удвоения даёт амортизированную стоимость &lt;code>O(1)&lt;/code> на один &lt;code>append&lt;/code>.&lt;/p></description></item><item><title>Передача по значению и по указателю</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</guid><description>&lt;h2 id="по-умолчанию--копия" class=link_owner>
  По умолчанию — копия
  &lt;a href="#%d0%bf%d0%be-%d1%83%d0%bc%d0%be%d0%bb%d1%87%d0%b0%d0%bd%d0%b8%d1%8e--%d0%ba%d0%be%d0%bf%d0%b8%d1%8f" class="link icon">
  &lt;svg>
@@ -1357,7 +1329,16 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Срез (&lt;code>[]T&lt;/code>) и карта (&lt;code>map[K]V&lt;/code>) внутри содержат указатель на данные. При передаче в функцию копируется заголовок (pointer + len + cap), но данные — общие:&lt;/p></description></item><item><title>Сбалансированные деревья: AVL и Red-Black</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</guid><description>&lt;h2 id="проблема-несбалансированности" class=link_owner>
+&lt;p>Срез (&lt;code>[]T&lt;/code>) и карта (&lt;code>map[K]V&lt;/code>) внутри содержат указатель на данные. При передаче в функцию копируется заголовок (pointer + len + cap), но данные — общие:&lt;/p></description></item><item><title>Практические задания</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-get-practice/</guid><description>&lt;p>В этой главе вас ждёт одно практическое упражнение в конце главы.&lt;/p>
+&lt;p>Текст о порядке работы с платформой появится здесь позже.&lt;/p>
+&lt;div class="goalgo-terminal-wrap">
+ &lt;script
+ src="https://gotogolang.github.io/widget.js"
+ data-pack="go"
+ 
+ data-tps-url="https://api.gotogo.pro">
+ &lt;/script>
+&lt;/div></description></item><item><title>Сбалансированные деревья: AVL и Red-Black</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</guid><description>&lt;h2 id="проблема-несбалансированности" class=link_owner>
  Проблема несбалансированности
  &lt;a href="#%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d0%b0-%d0%bd%d0%b5%d1%81%d0%b1%d0%b0%d0%bb%d0%b0%d0%bd%d1%81%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
  &lt;svg>
@@ -1796,32 +1777,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Если нужен фиксированный порядок — отсортируйте ключи отдельно:&lt;/p></description></item><item><title>Компиляция и сборка</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/03-compilation/</guid><description>&lt;h2 id="основные-команды" class=link_owner>
- Основные команды
- &lt;a href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;pre tabindex="0">&lt;code>go run main.go # скомпилировать и сразу запустить
-go build main.go # скомпилировать → бинарник ./main
-go build -o app main.go # бинарник с заданным именем
-&lt;/code>&lt;/pre>&lt;p>&lt;code>go run&lt;/code> компилирует и запускает без промежуточных файлов — удобно при разработке.
-&lt;code>go build&lt;/code> создаёт бинарник для деплоя: один файл, нет зависимостей.&lt;/p>
-&lt;h2 id="кросс-компиляция" class=link_owner>
- Кросс-компиляция
- &lt;a href="#%d0%ba%d1%80%d0%be%d1%81%d1%81-%d0%ba%d0%be%d0%bc%d0%bf%d0%b8%d0%bb%d1%8f%d1%86%d0%b8%d1%8f" class="link icon">
- &lt;svg>
- &lt;use xlink:href="#anchor-link">&lt;/use>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>Go поддерживает сборку под другие платформы без дополнительных инструментов:&lt;/p>
-&lt;pre tabindex="0">&lt;code>GOOS=linux GOARCH=amd64 go build -o app-linux main.go
-GOOS=darwin GOARCH=arm64 go build -o app-mac main.go
-GOOS=windows GOARCH=amd64 go build -o app.exe main.go
-&lt;/code>&lt;/pre>&lt;p>&lt;code>GOOS&lt;/code> — целевая ОС, &lt;code>GOARCH&lt;/code> — архитектура процессора.&lt;/p></description></item><item><title>Минимальное остовное дерево</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-09/03-spanning-tree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-09/03-spanning-tree/</guid><description>&lt;h2 id="определение" class=link_owner>
+&lt;p>Если нужен фиксированный порядок — отсортируйте ключи отдельно:&lt;/p></description></item><item><title>Минимальное остовное дерево</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-09/03-spanning-tree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-09/03-spanning-tree/</guid><description>&lt;h2 id="определение" class=link_owner>
  Определение
  &lt;a href="#%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5" class="link icon">
  &lt;svg>
@@ -2675,7 +2631,38 @@ GOOS=windows GOARCH=amd64 go build -o app.exe main.go
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Указатели и variadic-параметры независимы — их можно сочетать:&lt;/p></description></item><item><title>Эффективная обработка больших данных</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-05/03-bulk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-05/03-bulk/</guid><description>&lt;h2 id="потоковая-обработка" class=link_owner>
+&lt;p>Указатели и variadic-параметры независимы — их можно сочетать:&lt;/p></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
+ Краткая история
+ &lt;a href="#%d0%ba%d1%80%d0%b0%d1%82%d0%ba%d0%b0%d1%8f-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Go (неофициально — Golang) — компилируемый статически типизированный язык, созданный в Google в 2007 году. Его авторы — Роберт Гризмер, Роб Пайк и Кен Томпсон. Первый публичный релиз — 2009 год, версия 1.0 — 2012-й.&lt;/p>
+&lt;p>Язык создавался как ответ на реальные проблемы: медленная сборка C++ проектов, сложное управление конкурентностью, перегруженный синтаксис. С версии 1.0 гарантируется обратная совместимость.&lt;/p>
+&lt;h2 id="где-применяется" class=link_owner>
+ Где применяется
+ &lt;a href="#%d0%b3%d0%b4%d0%b5-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%8f%d0%b5%d1%82%d1%81%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Серверные приложения и API&lt;/strong> — в стандартной библиотеке уже есть полноценный HTTP-сервер.&lt;/li>
+&lt;li>&lt;strong>Инфраструктурные инструменты&lt;/strong> — Docker, Kubernetes, Terraform, Consul написаны на Go.&lt;/li>
+&lt;li>&lt;strong>CLI-утилиты&lt;/strong> — Go компилирует в статические бинарники без зависимостей.&lt;/li>
+&lt;/ul>
+&lt;h2 id="ключевые-особенности" class=link_owner>
+ Ключевые особенности
+ &lt;a href="#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;strong>Компиляция в нативный код&lt;/strong> — нет виртуальной машины, нет интерпретатора.&lt;/p></description></item><item><title>Эффективная обработка больших данных</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-05/03-bulk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-05/03-bulk/</guid><description>&lt;h2 id="потоковая-обработка" class=link_owner>
  Потоковая обработка
  &lt;a href="#%d0%bf%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d0%be%d0%b1%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b0" class="link icon">
  &lt;svg>
@@ -3117,50 +3104,41 @@ GOOS=windows GOARCH=amd64 go build -o app.exe main.go
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Встроенный метод можно переопределить:&lt;/p></description></item><item><title>Модули</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/04-modules/</guid><description>&lt;h2 id="что-такое-модуль" class=link_owner>
- Что такое модуль
- &lt;a href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d1%8c" class="link icon">
+&lt;p>Встроенный метод можно переопределить:&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-world" class=link_owner>
+ Hello, World!
+ &lt;a href="#hello-world" class="link icon">
  &lt;svg>
  &lt;use xlink:href="#anchor-link">&lt;/use>
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Модуль — проект Go, объявленный в файле &lt;code>go.mod&lt;/code>. Содержит имя модуля и список зависимостей.&lt;/p>
-&lt;pre tabindex="0">&lt;code>myapp/
-├── go.mod
-├── go.sum
-└── main.go
-&lt;/code>&lt;/pre>&lt;p>Инициализировать модуль:&lt;/p>
-&lt;pre tabindex="0">&lt;code>go mod init github.com/user/myapp
-&lt;/code>&lt;/pre>&lt;h2 id="gomod" class=link_owner>
- go.mod
- &lt;a href="#gomod" class="link icon">
+&lt;p>Давайте рассмотрим основные элементы синтаксиса языка на примере простой программы:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Разберём, что здесь происходит, построчно.&lt;/p>
+&lt;h3 id="package-main" class=link_owner>
+ &lt;code>package main&lt;/code>
+ &lt;a href="#package-main" class="link icon">
  &lt;svg>
  &lt;use xlink:href="#anchor-link">&lt;/use>
  &lt;/svg>
  &lt;/a>
-&lt;/h2>
-&lt;pre tabindex="0">&lt;code>module github.com/user/myapp
-
-go 1.23
-
-require (
- github.com/some/package v1.2.3
-)
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>&lt;code>module&lt;/code> — уникальное имя модуля (обычно путь к репозиторию).&lt;/li>
-&lt;li>&lt;code>go&lt;/code> — минимальная версия компилятора.&lt;/li>
-&lt;li>&lt;code>require&lt;/code> — зависимости с фиксированными версиями.&lt;/li>
-&lt;/ul>
-&lt;h2 id="gosum" class=link_owner>
- go.sum
- &lt;a href="#gosum" class="link icon">
+&lt;/h3>
+&lt;p>В начале каждого Go-файла объявляется принадлежность к пакету. Для запуска приложения обязательно наличие пакета с именем &lt;code>main&lt;/code>.&lt;/p>
+&lt;h3 id="import-fmt" class=link_owner>
+ &lt;code>import &amp;quot;fmt&amp;quot;&lt;/code>
+ &lt;a href="#import-fmt" class="link icon">
  &lt;svg>
  &lt;use xlink:href="#anchor-link">&lt;/use>
  &lt;/svg>
  &lt;/a>
-&lt;/h2>
-&lt;p>&lt;code>go.sum&lt;/code> хранит криптографические хэши зависимостей — гарантирует воспроизводимые сборки. Генерируется автоматически; нужно коммитить вместе с &lt;code>go.mod&lt;/code>.&lt;/p></description></item><item><title>Списки против массивов: когда что использовать</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-06/04-vs-arrays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-06/04-vs-arrays/</guid><description>&lt;h2 id="сравнение-операций" class=link_owner>
+&lt;/h3>
+&lt;p>После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item><item><title>Списки против массивов: когда что использовать</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-06/04-vs-arrays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-06/04-vs-arrays/</guid><description>&lt;h2 id="сравнение-операций" class=link_owner>
  Сравнение операций
  &lt;a href="#%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d0%b9" class="link icon">
  &lt;svg>
@@ -3637,18 +3615,4 @@ Reverse(&amp;#34;racecar&amp;#34;) → &amp;#34;racecar&amp;#34;
  data-exercise="go-expr-01"
  data-tps-url="https://api.gotogo.pro">
  &lt;/script>
-&lt;/div></description></item><item><title>О курсе</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/00-foreword/</guid><description>&lt;p>Данный курс разработан как начальный этап изучения Go (Golang) и нацелен на практическое закрепление базовых знаний перед погружением в более глубокие аспекты языка.&lt;/p>
-&lt;p>Курс рассчитан на тех, кто уже имеет базовые знания программирования и опыт работы с командной строкой. Прохождение курса не требует установки программного обеспечения на ваш ноутбук или компьютер: вам потребуется лишь подключение к сети Интернет и один из современных браузеров.&lt;/p>
-&lt;p>Программа курса охватывает:&lt;/p>
-&lt;ul>
-&lt;li>примитивные типы данных,&lt;/li>
-&lt;li>операторы и выражения,&lt;/li>
-&lt;li>объявление переменных,&lt;/li>
-&lt;li>ветвления и циклы,&lt;/li>
-&lt;li>встроенные структуры данных (массивы, срезы, карты),&lt;/li>
-&lt;li>работу с указателями,&lt;/li>
-&lt;li>основы функционального программирования,&lt;/li>
-&lt;li>основы объектно-ориентированного программирования,&lt;/li>
-&lt;li>обобщенные типы данных.&lt;/li>
-&lt;/ul>
-&lt;p>Теоретическая часть изложена в сжатом виде и имеет краткий, справочный характер. Некоторые из базовых тем усечены или исключены из рассмотрения. Это сделано намеренно, чтобы не перегружая информацией дать объем знаний минимально необходимый для выполнения практических заданий и упражнений. За дополнительной информацией всегда можно обратиться к официальной документации.&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
