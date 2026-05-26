@@ -21,6 +21,29 @@
 .content h3 { margin-top: 2rem; }
 .content h4 { margin-top: 1.5rem; }
 
+/* Justified text with first-line indent in prose paragraphs */
+.content p {
+  text-align: justify;
+  text-indent: 1.5em;
+}
+/* No indent after headings, images, or other block elements */
+.content h2 + p,
+.content h3 + p,
+.content h4 + p,
+.content hr + p,
+.content blockquote + p,
+.content pre + p,
+.content ul + p,
+.content ol + p,
+.content table + p,
+.content p:first-child {
+  text-indent: 0;
+}
+/* Lists stay left-aligned */
+.content li {
+  text-align: left;
+}
+
 /* Terminal widget container */
 .goalgo-terminal-wrap {
   margin: 2rem 0;
