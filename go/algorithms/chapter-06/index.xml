@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 6. Связные списки on GoToGo</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/</link><description>Recent content in Глава 6. Связные списки on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/go/algorithms/chapter-06/index.xml" rel="self" type="application/rss+xml"/><item><title>Односвязные и двусвязные списки</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/01-linked-lists/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/01-linked-lists/</guid><description>&lt;h2 id="односвязный-список" class=link_owner>
+ Односвязный список
+ &lt;a href="#%d0%be%d0%b4%d0%bd%d0%be%d1%81%d0%b2%d1%8f%d0%b7%d0%bd%d1%8b%d0%b9-%d1%81%d0%bf%d0%b8%d1%81%d0%be%d0%ba" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Каждый узел хранит значение и указатель на следующий узел. Последний узел указывает на &lt;code>nil&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span> &lt;span class="kt">any&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Value&lt;/span> &lt;span class="nx">T&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Next&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span> &lt;span class="kt">any&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Head&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">size&lt;/span> &lt;span class="kt">int&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">PushFront&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]{&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Next&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">size&lt;/span>&lt;span class="o">++&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">PopFront&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">bool&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">zero&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">zero&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">false&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">v&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">size&lt;/span>&lt;span class="o">--&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="двусвязный-список" class=link_owner>
+ Двусвязный список
+ &lt;a href="#%d0%b4%d0%b2%d1%83%d1%81%d0%b2%d1%8f%d0%b7%d0%bd%d1%8b%d0%b9-%d1%81%d0%bf%d0%b8%d1%81%d0%be%d0%ba" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Каждый узел хранит указатели на следующий &lt;strong>и&lt;/strong> предыдущий узлы. Позволяет обходить список в обоих направлениях и удалять узел за &lt;code>O(1)&lt;/code> при наличии указателя.&lt;/p></description></item><item><title>Операции над списком</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/02-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/02-operations/</guid><description>&lt;h2 id="вставка" class=link_owner>
+ Вставка
+ &lt;a href="#%d0%b2%d1%81%d1%82%d0%b0%d0%b2%d0%ba%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Вставка в начало — O(1)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">PushFront&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]{&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Next&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Вставка после узла — O(1) при наличии указателя&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nx">insertAfter&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span> &lt;span class="kt">any&lt;/span>&lt;span class="p">](&lt;/span>&lt;span class="nx">node&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">v&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">node&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]{&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Next&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">node&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Вставка в конец — O(n) для односвязного (нет tail)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">PushBack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]{&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">cur&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">n&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="удаление" class=link_owner>
+ Удаление
+ &lt;a href="#%d1%83%d0%b4%d0%b0%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Удаление головы — O(1)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">PopFront&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">bool&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">zero&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">zero&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">false&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">v&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Удаление по значению — O(n)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">Remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">eq&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nf">eq&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">cur&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nf">eq&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">cur&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="обход-и-поиск" class=link_owner>
+ Обход и поиск
+ &lt;a href="#%d0%be%d0%b1%d1%85%d0%be%d0%b4-%d0%b8-%d0%bf%d0%be%d0%b8%d1%81%d0%ba" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Обход — O(n)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">ForEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">fn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Поиск — O(n)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">SList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">Find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">eq&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Head&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nf">eq&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cur&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">cur&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="разворот-списка" class=link_owner>
+ Разворот списка
+ &lt;a href="#%d1%80%d0%b0%d0%b7%d0%b2%d0%be%d1%80%d0%be%d1%82-%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Классическая задача — итеративный разворот за &lt;code>O(n)&lt;/code> и &lt;code>O(1)&lt;/code> памяти:&lt;/p></description></item><item><title>Реализация списка с интерфейсами Go</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/03-interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/03-interfaces/</guid><description>&lt;h2 id="containerlist-из-стандартной-библиотеки" class=link_owner>
+ container/list из стандартной библиотеки
+ &lt;a href="#containerlist-%d0%b8%d0%b7-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82%d0%bd%d0%be%d0%b9-%d0%b1%d0%b8%d0%b1%d0%bb%d0%b8%d0%be%d1%82%d0%b5%d0%ba%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Go предоставляет двусвязный список в &lt;code>container/list&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;container/list&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">l&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Добавление&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">e1&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">PushBack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">e2&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">PushBack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">e3&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">PushFront&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Вставка относительно элемента&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">InsertAfter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">e1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">InsertBefore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">e1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Удаление&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Обход&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="nx">e&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Front&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="nx">e&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">e&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Next&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Value&lt;/span>&lt;span class="p">.(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>list.Element.Value&lt;/code> имеет тип &lt;code>any&lt;/code> — нужно приведение типа при чтении.&lt;/p>
+&lt;h2 id="типобезопасный-список-через-дженерики" class=link_owner>
+ Типобезопасный список через дженерики
+ &lt;a href="#%d1%82%d0%b8%d0%bf%d0%be%d0%b1%d0%b5%d0%b7%d0%be%d0%bf%d0%b0%d1%81%d0%bd%d1%8b%d0%b9-%d1%81%d0%bf%d0%b8%d1%81%d0%be%d0%ba-%d1%87%d0%b5%d1%80%d0%b5%d0%b7-%d0%b4%d0%b6%d0%b5%d0%bd%d0%b5%d1%80%d0%b8%d0%ba%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span> &lt;span class="kt">any&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">head&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tail&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">len&lt;/span> &lt;span class="kt">int&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span> &lt;span class="kt">any&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">val&lt;/span> &lt;span class="nx">T&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">prev&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">next&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">PushBack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]{&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">prev&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">tail&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">tail&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">tail&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">tail&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">n&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">head&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">len&lt;/span>&lt;span class="o">++&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">n&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">Len&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">len&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="функциональный-обход" class=link_owner>
+ Функциональный обход
+ &lt;a href="#%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%be%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%be%d0%b1%d1%85%d0%be%d0%b4" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">Filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]{}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">head&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">n&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nf">fn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">PushBack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="nf">Map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="p">]{}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">l&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">head&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">n&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">PushBack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">fn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="упражнения" class=link_owner>
+ Упражнения
+ &lt;a href="#%d1%83%d0%bf%d1%80%d0%b0%d0%b6%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>№&lt;/th>
+ &lt;th>Задание&lt;/th>
+ &lt;th>Сложность&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>1&lt;/td>
+ &lt;td>Упражнение 1&lt;/td>
+ &lt;td>easy&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>2&lt;/td>
+ &lt;td>Упражнение 2&lt;/td>
+ &lt;td>easy&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3&lt;/td>
+ &lt;td>Упражнение 3&lt;/td>
+ &lt;td>medium&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>Списки против массивов: когда что использовать</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/04-vs-arrays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/04-vs-arrays/</guid><description>&lt;h2 id="сравнение-операций" class=link_owner>
+ Сравнение операций
+ &lt;a href="#%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d0%b9" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Операция&lt;/th>
+ &lt;th>Массив/Срез&lt;/th>
+ &lt;th>Связный список&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Доступ по индексу&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Поиск&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Вставка в начало&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Вставка в конец&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code> амор.&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code> (с tail)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Вставка в середину&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code> *&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Удаление из начала&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Удаление из середины&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code> *&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Память на элемент&lt;/td>
+ &lt;td>1 слово&lt;/td>
+ &lt;td>2–3 слова (+ ptr)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Кэш-дружественность&lt;/td>
+ &lt;td>✓ высокая&lt;/td>
+ &lt;td>✗ низкая&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>* при наличии указателя на узел&lt;/p>
+&lt;h2 id="кэш-и-производительность" class=link_owner>
+ Кэш и производительность
+ &lt;a href="#%d0%ba%d1%8d%d1%88-%d0%b8-%d0%bf%d1%80%d0%be%d0%b8%d0%b7%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d0%be%d1%81%d1%82%d1%8c" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Массивы — &lt;strong>непрерывная&lt;/strong> область памяти. Процессор загружает соседние элементы в кэш-линию (64 байта). Связный список — узлы разбросаны по heap, каждый переход по &lt;code>next&lt;/code> — потенциальный cache miss.&lt;/p></description></item></channel></rss>

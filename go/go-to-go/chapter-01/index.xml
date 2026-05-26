@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 1. Введение в Go on GoToGo</title><link>https://gotogolang.github.io/go/go-to-go/chapter-01/</link><description>Recent content in Глава 1. Введение в Go on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/go/go-to-go/chapter-01/index.xml" rel="self" type="application/rss+xml"/><item><title>Предисловие</title><link>https://gotogolang.github.io/go/go-to-go/chapter-01/00-foreword/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-01/00-foreword/</guid><description>&lt;p>Курс &lt;strong>&amp;quot;Goto Go!&amp;quot;&lt;/strong> разработан как начальный этап изучения Go (Golang) и нацелен на практическое закрепление базовых знаний перед погружением в более глубокие аспекты языка.&lt;/p>
+&lt;h2 id="для-кого-этот-курс" class=link_owner>
+ Для кого этот курс
+ &lt;a href="#%d0%b4%d0%bb%d1%8f-%d0%ba%d0%be%d0%b3%d0%be-%d1%8d%d1%82%d0%be%d1%82-%d0%ba%d1%83%d1%80%d1%81" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Курс рассчитан на тех, кто уже имеет базовые познания в программировании и опыт работы с командной строкой. Прохождение курса не требует установки программного обеспечения: вам потребуется лишь подключение к Интернет и любой из современных браузеров.&lt;/p>
+&lt;h2 id="программа-курса" class=link_owner>
+ Программа курса
+ &lt;a href="#%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d0%b0-%d0%ba%d1%83%d1%80%d1%81%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Примитивные типы данных&lt;/li>
+&lt;li>Операторы и выражения&lt;/li>
+&lt;li>Объявление переменных&lt;/li>
+&lt;li>Ветвления и циклы&lt;/li>
+&lt;li>Встроенные структуры данных — массивы, срезы, карты&lt;/li>
+&lt;li>Работа с указателями&lt;/li>
+&lt;li>Основы функционального программирования&lt;/li>
+&lt;li>Основы объектно-ориентированного программирования&lt;/li>
+&lt;li>Обобщённые типы данных&lt;/li>
+&lt;/ul>
+&lt;h2 id="особенности-курса" class=link_owner>
+ Особенности курса
+ &lt;a href="#%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%ba%d1%83%d1%80%d1%81%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Теоретическая часть изложена в сжатом виде и носит краткий, справочный характер. Некоторые темы намеренно усечены или исключены из рассмотрения — чтобы не перегружать информацией и дать объём знаний, минимально необходимый для выполнения практических заданий. За дополнительной информацией всегда можно обратиться к официальной документации.&lt;/p></description></item><item><title>Что такое Go?</title><link>https://gotogolang.github.io/go/go-to-go/chapter-01/01-what-is-go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-01/01-what-is-go/</guid><description>&lt;h2 id="краткая-история" class=link_owner>
+ Краткая история
+ &lt;a href="#%d0%ba%d1%80%d0%b0%d1%82%d0%ba%d0%b0%d1%8f-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Go (неофициально — Golang) — компилируемый статически типизированный язык, созданный в Google в 2007 году. Его авторы — Роберт Гризмер, Роб Пайк и Кен Томпсон. Первый публичный релиз — 2009 год, версия 1.0 — 2012-й.&lt;/p>
+&lt;p>Язык создавался как ответ на реальные проблемы: медленная сборка C++ проектов, сложное управление конкурентностью, перегруженный синтаксис. С версии 1.0 гарантируется обратная совместимость.&lt;/p>
+&lt;h2 id="где-применяется" class=link_owner>
+ Где применяется
+ &lt;a href="#%d0%b3%d0%b4%d0%b5-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d1%8f%d0%b5%d1%82%d1%81%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Серверные приложения и API&lt;/strong> — в стандартной библиотеке уже есть полноценный HTTP-сервер.&lt;/li>
+&lt;li>&lt;strong>Инфраструктурные инструменты&lt;/strong> — Docker, Kubernetes, Terraform, Consul написаны на Go.&lt;/li>
+&lt;li>&lt;strong>CLI-утилиты&lt;/strong> — Go компилирует в статические бинарники без зависимостей.&lt;/li>
+&lt;/ul>
+&lt;h2 id="ключевые-особенности" class=link_owner>
+ Ключевые особенности
+ &lt;a href="#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;strong>Компиляция в нативный код&lt;/strong> — нет виртуальной машины, нет интерпретатора.&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/go/go-to-go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-world" class=link_owner>
+ Hello, World!
+ &lt;a href="#hello-world" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Давайте рассмотрим основные элементы синтаксиса языка на примере простой программы:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Разберём, что здесь происходит, построчно.&lt;/p>
+&lt;h3 id="package-main" class=link_owner>
+ &lt;code>package main&lt;/code>
+ &lt;a href="#package-main" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h3>
+&lt;p>В начале каждого Go-файла объявляется принадлежность к пакету. Для запуска приложения обязательно наличие пакета с именем &lt;code>main&lt;/code>.&lt;/p>
+&lt;h3 id="import-fmt" class=link_owner>
+ &lt;code>import &amp;quot;fmt&amp;quot;&lt;/code>
+ &lt;a href="#import-fmt" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h3>
+&lt;p>После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item></channel></rss>

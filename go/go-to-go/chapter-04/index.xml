@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 4. Указатели и работа с памятью on GoToGo</title><link>https://gotogolang.github.io/go/go-to-go/chapter-04/</link><description>Recent content in Глава 4. Указатели и работа с памятью on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/go/go-to-go/chapter-04/index.xml" rel="self" type="application/rss+xml"/><item><title>Указатели</title><link>https://gotogolang.github.io/go/go-to-go/chapter-04/01-pointers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-04/01-pointers/</guid><description>&lt;h2 id="что-такое-указатель" class=link_owner>
+ Что такое указатель
+ &lt;a href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d1%8c" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Указатель — переменная, которая хранит &lt;strong>адрес&lt;/strong> другой переменной в памяти, а не её значение.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">x&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">42&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">p&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="c1">// p содержит адрес x&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 0xc000018068 (адрес)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 42 — разыменование&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Оператор &lt;code>&amp;amp;&lt;/code> получает адрес переменной. Оператор &lt;code>*&lt;/code> — читает значение по адресу.&lt;/p>
+&lt;h2 id="тип-указателя" class=link_owner>
+ Тип указателя
+ &lt;a href="#%d1%82%d0%b8%d0%bf-%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Тип указателя записывается со звёздочкой: &lt;code>*int&lt;/code>, &lt;code>*string&lt;/code>, &lt;code>*MyStruct&lt;/code>. Указатель на &lt;code>int&lt;/code> и указатель на &lt;code>string&lt;/code> — разные типы; присваивать их друг другу нельзя.&lt;/p></description></item><item><title>Передача по значению и по указателю</title><link>https://gotogolang.github.io/go/go-to-go/chapter-04/02-value-vs-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-04/02-value-vs-reference/</guid><description>&lt;h2 id="по-умолчанию--копия" class=link_owner>
+ По умолчанию — копия
+ &lt;a href="#%d0%bf%d0%be-%d1%83%d0%bc%d0%be%d0%bb%d1%87%d0%b0%d0%bd%d0%b8%d1%8e--%d0%ba%d0%be%d0%bf%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Go передаёт аргументы в функции &lt;strong>по значению&lt;/strong>: функция получает копию, а не оригинал.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">x&lt;/span> &lt;span class="o">*=&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="c1">// изменяет только копию&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 5 — не изменилось&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="передача-указателя" class=link_owner>
+ Передача указателя
+ &lt;a href="#%d0%bf%d0%b5%d1%80%d0%b5%d0%b4%d0%b0%d1%87%d0%b0-%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Чтобы функция могла изменить переменную вызывающего кода, передают адрес:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">*&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">*=&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="срезы-и-карты--ссылочные-типы" class=link_owner>
+ Срезы и карты — ссылочные типы
+ &lt;a href="#%d1%81%d1%80%d0%b5%d0%b7%d1%8b-%d0%b8-%d0%ba%d0%b0%d1%80%d1%82%d1%8b--%d1%81%d1%81%d1%8b%d0%bb%d0%be%d1%87%d0%bd%d1%8b%d0%b5-%d1%82%d0%b8%d0%bf%d1%8b" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Срез (&lt;code>[]T&lt;/code>) и карта (&lt;code>map[K]V&lt;/code>) внутри содержат указатель на данные. При передаче в функцию копируется заголовок (pointer + len + cap), но данные — общие:&lt;/p></description></item><item><title>Функции с переменным числом аргументов</title><link>https://gotogolang.github.io/go/go-to-go/chapter-04/03-variadic-pointers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-04/03-variadic-pointers/</guid><description>&lt;h2 id="variadic-функции" class=link_owner>
+ Variadic-функции
+ &lt;a href="#variadic-%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Многоточие &lt;code>...T&lt;/code> позволяет принимать произвольное количество аргументов одного типа:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">nums&lt;/span> &lt;span class="o">...&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">total&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">nums&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">total&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">n&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">total&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1">// 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">40&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1">// 100&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Внутри функции &lt;code>nums&lt;/code> — обычный срез &lt;code>[]int&lt;/code>.&lt;/p>
+&lt;h2 id="распаковка-среза" class=link_owner>
+ Распаковка среза
+ &lt;a href="#%d1%80%d0%b0%d1%81%d0%bf%d0%b0%d0%ba%d0%be%d0%b2%d0%ba%d0%b0-%d1%81%d1%80%d0%b5%d0%b7%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Если данные уже в срезе, его можно распаковать оператором &lt;code>...&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">nums&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">nums&lt;/span>&lt;span class="o">...&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1">// 6&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="указатель--variadic" class=link_owner>
+ Указатель + variadic
+ &lt;a href="#%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d1%8c--variadic" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Указатели и variadic-параметры независимы — их можно сочетать:&lt;/p></description></item><item><title>Когда использовать указатель</title><link>https://gotogolang.github.io/go/go-to-go/chapter-04/04-when-to-use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/go-to-go/chapter-04/04-when-to-use/</guid><description>&lt;h2 id="правила-выбора" class=link_owner>
+ Правила выбора
+ &lt;a href="#%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%b0-%d0%b2%d1%8b%d0%b1%d0%be%d1%80%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Ситуация&lt;/th>
+ &lt;th>Рекомендация&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Функция должна изменить переменную вызывающего кода&lt;/td>
+ &lt;td>указатель&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Структура больше ~64 байт&lt;/td>
+ &lt;td>указатель (избегаем копирования)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Нужно выразить «нет значения» (optional)&lt;/td>
+ &lt;td>указатель (можно &lt;code>nil&lt;/code>)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Маленький тип, функция только читает&lt;/td>
+ &lt;td>значение&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Срез, карта, канал&lt;/td>
+ &lt;td>значение (они уже содержат указатель внутри)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="структуры-и-указатели" class=link_owner>
+ Структуры и указатели
+ &lt;a href="#%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d1%8b-%d0%b8-%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Метод с pointer-receiver может изменять поля структуры; с value-receiver — нет:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Counter&lt;/span> &lt;span class="kd">struct&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">c&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Counter&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Inc&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="o">++&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="c1">// изменяет оригинал&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">c&lt;/span> &lt;span class="nx">Counter&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Val&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Если хоть один метод объявлен с &lt;code>*T&lt;/code>, все остальные методы того же типа обычно тоже делают pointer-receiver — для консистентности.&lt;/p></description></item></channel></rss>

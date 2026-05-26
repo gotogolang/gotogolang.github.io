@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithms on GoToGo</title><link>https://gotogolang.github.io/series/algorithms/</link><description>Recent content in Algorithms on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/series/algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>Асимптотическая сложность</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-01/01-big-o/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-01/01-big-o/</guid><description>&lt;h2 id="зачем-нужна-формальная-оценка" class=link_owner>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithms on GoToGo</title><link>https://gotogolang.github.io/series/algorithms/</link><description>Recent content in Algorithms on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/series/algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>Асимптотическая сложность</title><link>https://gotogolang.github.io/go/algorithms/chapter-01/01-big-o/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-01/01-big-o/</guid><description>&lt;h2 id="зачем-нужна-формальная-оценка" class=link_owner>
  Зачем нужна формальная оценка
  &lt;a href="#%d0%b7%d0%b0%d1%87%d0%b5%d0%bc-%d0%bd%d1%83%d0%b6%d0%bd%d0%b0-%d1%84%d0%be%d1%80%d0%bc%d0%b0%d0%bb%d1%8c%d0%bd%d0%b0%d1%8f-%d0%be%d1%86%d0%b5%d0%bd%d0%ba%d0%b0" class="link icon">
  &lt;svg>
@@ -51,7 +51,7 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>Рост при увеличении &lt;code>n&lt;/code>:&lt;/p></description></item><item><title>Бинарное дерево поиска</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-08/01-bst/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-08/01-bst/</guid><description>&lt;h2 id="структура" class=link_owner>
+&lt;p>Рост при увеличении &lt;code>n&lt;/code>:&lt;/p></description></item><item><title>Бинарное дерево поиска</title><link>https://gotogolang.github.io/go/algorithms/chapter-08/01-bst/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-08/01-bst/</guid><description>&lt;h2 id="структура" class=link_owner>
  Структура
  &lt;a href="#%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0" class="link icon">
  &lt;svg>
@@ -104,7 +104,7 @@
  &lt;/a>
 &lt;/h2>
 &lt;p>Три случая: узел — лист, имеет одного ребёнка, имеет двух детей.
-При двух детях — заменяем на &lt;strong>in-order successor&lt;/strong> (минимум правого поддерева).&lt;/p></description></item><item><title>Массивы и срезы: основы</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-05/01-static-dynamic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-05/01-static-dynamic/</guid><description>&lt;h2 id="массивы" class=link_owner>
+При двух детях — заменяем на &lt;strong>in-order successor&lt;/strong> (минимум правого поддерева).&lt;/p></description></item><item><title>Массивы и срезы: основы</title><link>https://gotogolang.github.io/go/algorithms/chapter-05/01-static-dynamic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-05/01-static-dynamic/</guid><description>&lt;h2 id="массивы" class=link_owner>
  Массивы
  &lt;a href="#%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d1%8b" class="link icon">
  &lt;svg>
@@ -132,7 +132,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Срез — &lt;strong>дескриптор&lt;/strong> для сегмента массива: три поля &lt;code>(ptr, len, cap)&lt;/code>.&lt;/p></description></item><item><title>Односвязные и двусвязные списки</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-06/01-linked-lists/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-06/01-linked-lists/</guid><description>&lt;h2 id="односвязный-список" class=link_owner>
+&lt;p>Срез — &lt;strong>дескриптор&lt;/strong> для сегмента массива: три поля &lt;code>(ptr, len, cap)&lt;/code>.&lt;/p></description></item><item><title>Односвязные и двусвязные списки</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/01-linked-lists/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/01-linked-lists/</guid><description>&lt;h2 id="односвязный-список" class=link_owner>
  Односвязный список
  &lt;a href="#%d0%be%d0%b4%d0%bd%d0%be%d1%81%d0%b2%d1%8f%d0%b7%d0%bd%d1%8b%d0%b9-%d1%81%d0%bf%d0%b8%d1%81%d0%be%d0%ba" class="link icon">
  &lt;svg>
@@ -171,7 +171,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Каждый узел хранит указатели на следующий &lt;strong>и&lt;/strong> предыдущий узлы. Позволяет обходить список в обоих направлениях и удалять узел за &lt;code>O(1)&lt;/code> при наличии указателя.&lt;/p></description></item><item><title>Поиск в упорядоченных последовательностях</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-03/01-ordered-search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-03/01-ordered-search/</guid><description>&lt;h2 id="линейный-поиск" class=link_owner>
+&lt;p>Каждый узел хранит указатели на следующий &lt;strong>и&lt;/strong> предыдущий узлы. Позволяет обходить список в обоих направлениях и удалять узел за &lt;code>O(1)&lt;/code> при наличии указателя.&lt;/p></description></item><item><title>Поиск в упорядоченных последовательностях</title><link>https://gotogolang.github.io/go/algorithms/chapter-03/01-ordered-search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-03/01-ordered-search/</guid><description>&lt;h2 id="линейный-поиск" class=link_owner>
  Линейный поиск
  &lt;a href="#%d0%bb%d0%b8%d0%bd%d0%b5%d0%b9%d0%bd%d1%8b%d0%b9-%d0%bf%d0%be%d0%b8%d1%81%d0%ba" class="link icon">
  &lt;svg>
@@ -213,7 +213,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Оценивает позицию цели по значению, а не делит пополам. &lt;code>O(log log n)&lt;/code> для равномерных распределений, &lt;code>O(n)&lt;/code> в худшем.&lt;/p></description></item><item><title>Представление графов</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-09/01-representation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-09/01-representation/</guid><description>&lt;h2 id="основные-понятия" class=link_owner>
+&lt;p>Оценивает позицию цели по значению, а не делит пополам. &lt;code>O(log log n)&lt;/code> для равномерных распределений, &lt;code>O(n)&lt;/code> в худшем.&lt;/p></description></item><item><title>Представление графов</title><link>https://gotogolang.github.io/go/algorithms/chapter-09/01-representation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-09/01-representation/</guid><description>&lt;h2 id="основные-понятия" class=link_owner>
  Основные понятия
  &lt;a href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%bf%d0%be%d0%bd%d1%8f%d1%82%d0%b8%d1%8f" class="link icon">
  &lt;svg>
@@ -251,7 +251,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">g&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">MatrixGraph&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">AddEdge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">weight&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">g&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">adj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">to&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">weight&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">g&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">MatrixGraph&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">HasEdge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">g&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">adj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">to&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Сложность:&lt;/strong> &lt;code>O(V²)&lt;/code> памяти. Проверка ребра — &lt;code>O(1)&lt;/code>. Перебор соседей — &lt;code>O(V)&lt;/code>.
-Подходит для &lt;strong>плотных&lt;/strong> графов (E ≈ V²).&lt;/p></description></item><item><title>Простые сортировки</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-02/01-simple-sorts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-02/01-simple-sorts/</guid><description>&lt;p>Три классических алгоритма с квадратичной сложностью. Полезны для малых данных и как базис для понимания более сложных методов.&lt;/p>
+Подходит для &lt;strong>плотных&lt;/strong> графов (E ≈ V²).&lt;/p></description></item><item><title>Простые сортировки</title><link>https://gotogolang.github.io/go/algorithms/chapter-02/01-simple-sorts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-02/01-simple-sorts/</guid><description>&lt;p>Три классических алгоритма с квадратичной сложностью. Полезны для малых данных и как базис для понимания более сложных методов.&lt;/p>
 &lt;h2 id="пузырьковая-сортировка-bubble-sort" class=link_owner>
  Пузырьковая сортировка (Bubble Sort)
  &lt;a href="#%d0%bf%d1%83%d0%b7%d1%8b%d1%80%d1%8c%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d1%81%d0%be%d1%80%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%ba%d0%b0-bubble-sort" class="link icon">
@@ -279,7 +279,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>На каждом шаге находит минимум в неотсортированной части и ставит его на место. &lt;code>O(n²)&lt;/code>, минимум обменов.&lt;/p></description></item><item><title>Стеки и очереди</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-07/01-basic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-07/01-basic/</guid><description>&lt;h2 id="стек-lifo" class=link_owner>
+&lt;p>На каждом шаге находит минимум в неотсортированной части и ставит его на место. &lt;code>O(n²)&lt;/code>, минимум обменов.&lt;/p></description></item><item><title>Стеки и очереди</title><link>https://gotogolang.github.io/go/algorithms/chapter-07/01-basic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-07/01-basic/</guid><description>&lt;h2 id="стек-lifo" class=link_owner>
  Стек (LIFO)
  &lt;a href="#%d1%81%d1%82%d0%b5%d0%ba-lifo" class="link icon">
  &lt;svg>
@@ -328,7 +328,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">:]&lt;/span> &lt;span class="c1">// O(n) — сдвиг; для O(1) нужен кольцевой буфер&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">true&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Применения: очереди задач, обход BFS, буферизация потоков.&lt;/p></description></item><item><title>Хеш-функции и разрешение коллизий</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-04/01-hashing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-04/01-hashing/</guid><description>&lt;h2 id="что-такое-хеш-функция" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Применения: очереди задач, обход BFS, буферизация потоков.&lt;/p></description></item><item><title>Хеш-функции и разрешение коллизий</title><link>https://gotogolang.github.io/go/algorithms/chapter-04/01-hashing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-04/01-hashing/</guid><description>&lt;h2 id="что-такое-хеш-функция" class=link_owner>
  Что такое хеш-функция
  &lt;a href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d1%85%d0%b5%d1%88-%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d1%8f" class="link icon">
  &lt;svg>
@@ -364,7 +364,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h3>
-&lt;p>Каждая ячейка хранит связный список элементов с одинаковым хешем.&lt;/p></description></item><item><title>Быстрые сортировки</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-02/02-fast-sorts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-02/02-fast-sorts/</guid><description>&lt;p>Алгоритмы с &lt;code>O(n log n)&lt;/code> в среднем или гарантированно. Основа стандартных библиотек.&lt;/p>
+&lt;p>Каждая ячейка хранит связный список элементов с одинаковым хешем.&lt;/p></description></item><item><title>Быстрые сортировки</title><link>https://gotogolang.github.io/go/algorithms/chapter-02/02-fast-sorts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-02/02-fast-sorts/</guid><description>&lt;p>Алгоритмы с &lt;code>O(n log n)&lt;/code> в среднем или гарантированно. Основа стандартных библиотек.&lt;/p>
 &lt;h2 id="quicksort" class=link_owner>
  QuickSort
  &lt;a href="#quicksort" class="link icon">
@@ -402,7 +402,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Делит массив пополам, рекурсивно сортирует каждую половину, затем сливает. Гарантированное &lt;code>O(n log n)&lt;/code>, но требует &lt;code>O(n)&lt;/code> памяти.&lt;/p></description></item><item><title>Внутренняя реализация map в Go</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-04/02-go-maps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-04/02-go-maps/</guid><description>&lt;h2 id="структура-map" class=link_owner>
+&lt;p>Делит массив пополам, рекурсивно сортирует каждую половину, затем сливает. Гарантированное &lt;code>O(n log n)&lt;/code>, но требует &lt;code>O(n)&lt;/code> памяти.&lt;/p></description></item><item><title>Внутренняя реализация map в Go</title><link>https://gotogolang.github.io/go/algorithms/chapter-04/02-go-maps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-04/02-go-maps/</guid><description>&lt;h2 id="структура-map" class=link_owner>
  Структура map
  &lt;a href="#%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0-map" class="link icon">
  &lt;svg>
@@ -421,7 +421,7 @@
  ├── tophash[8] — верхние 8 бит хеша каждого ключа
  ├── keys[8]
  └── values[8]
-&lt;/code>&lt;/pre>&lt;p>&lt;code>tophash&lt;/code> позволяет быстро отсеять несовпадения без полного сравнения ключей.&lt;/p></description></item><item><title>Временная и пространственная сложность</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-01/02-time-space/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-01/02-time-space/</guid><description>&lt;h2 id="два-измерения-эффективности" class=link_owner>
+&lt;/code>&lt;/pre>&lt;p>&lt;code>tophash&lt;/code> позволяет быстро отсеять несовпадения без полного сравнения ключей.&lt;/p></description></item><item><title>Временная и пространственная сложность</title><link>https://gotogolang.github.io/go/algorithms/chapter-01/02-time-space/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-01/02-time-space/</guid><description>&lt;h2 id="два-измерения-эффективности" class=link_owner>
  Два измерения эффективности
  &lt;a href="#%d0%b4%d0%b2%d0%b0-%d0%b8%d0%b7%d0%bc%d0%b5%d1%80%d0%b5%d0%bd%d0%b8%d1%8f-%d1%8d%d1%84%d1%84%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
  &lt;svg>
@@ -466,7 +466,7 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>Пример — линейный поиск:&lt;/p></description></item><item><title>Классические алгоритмы поиска по шаблону</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-03/02-pattern-classic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-03/02-pattern-classic/</guid><description>&lt;p>Задача: найти все вхождения строки-шаблона &lt;code>p&lt;/code> (длина &lt;code>m&lt;/code>) в текст &lt;code>t&lt;/code> (длина &lt;code>n&lt;/code>).&lt;/p>
+&lt;p>Пример — линейный поиск:&lt;/p></description></item><item><title>Классические алгоритмы поиска по шаблону</title><link>https://gotogolang.github.io/go/algorithms/chapter-03/02-pattern-classic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-03/02-pattern-classic/</guid><description>&lt;p>Задача: найти все вхождения строки-шаблона &lt;code>p&lt;/code> (длина &lt;code>m&lt;/code>) в текст &lt;code>t&lt;/code> (длина &lt;code>n&lt;/code>).&lt;/p>
 &lt;h2 id="brute-force" class=link_owner>
  Brute Force
  &lt;a href="#brute-force" class="link icon">
@@ -495,7 +495,7 @@
  &lt;/a>
 &lt;/h2>
 &lt;p>Вычисляет хеш шаблона, затем скользит по тексту, сравнивая хеши. При совпадении — дополнительная проверка строк. Среднее &lt;code>O(n+m)&lt;/code>, худшее &lt;code>O(n·m)&lt;/code>.&lt;/p>
-&lt;p>Ключевой приём — &lt;strong>rolling hash&lt;/strong>: хеш следующего окна вычисляется за &lt;code>O(1)&lt;/code> из предыдущего.&lt;/p></description></item><item><title>Кольцевой буфер</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-07/02-ring-buffer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-07/02-ring-buffer/</guid><description>&lt;h2 id="идея" class=link_owner>
+&lt;p>Ключевой приём — &lt;strong>rolling hash&lt;/strong>: хеш следующего окна вычисляется за &lt;code>O(1)&lt;/code> из предыдущего.&lt;/p></description></item><item><title>Кольцевой буфер</title><link>https://gotogolang.github.io/go/algorithms/chapter-07/02-ring-buffer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-07/02-ring-buffer/</guid><description>&lt;h2 id="идея" class=link_owner>
  Идея
  &lt;a href="#%d0%b8%d0%b4%d0%b5%d1%8f" class="link icon">
  &lt;svg>
@@ -628,7 +628,7 @@
  &lt;td>medium&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Обходы графа: DFS и BFS</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-09/02-traversal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-09/02-traversal/</guid><description>&lt;h2 id="dfs--обход-в-глубину" class=link_owner>
+&lt;/table></description></item><item><title>Обходы графа: DFS и BFS</title><link>https://gotogolang.github.io/go/algorithms/chapter-09/02-traversal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-09/02-traversal/</guid><description>&lt;h2 id="dfs--обход-в-глубину" class=link_owner>
  DFS — обход в глубину
  &lt;a href="#dfs--%d0%be%d0%b1%d1%85%d0%be%d0%b4-%d0%b2-%d0%b3%d0%bb%d1%83%d0%b1%d0%b8%d0%bd%d1%83" class="link icon">
  &lt;svg>
@@ -674,7 +674,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Обходит вершины слоями — сначала все соседи, потом соседи соседей. Использует очередь. Находит кратчайший путь в &lt;strong>невзвешенном&lt;/strong> графе.&lt;/p></description></item><item><title>Операции над списком</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-06/02-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-06/02-operations/</guid><description>&lt;h2 id="вставка" class=link_owner>
+&lt;p>Обходит вершины слоями — сначала все соседи, потом соседи соседей. Использует очередь. Находит кратчайший путь в &lt;strong>невзвешенном&lt;/strong> графе.&lt;/p></description></item><item><title>Операции над списком</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/02-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/02-operations/</guid><description>&lt;h2 id="вставка" class=link_owner>
  Вставка
  &lt;a href="#%d0%b2%d1%81%d1%82%d0%b0%d0%b2%d0%ba%d0%b0" class="link icon">
  &lt;svg>
@@ -757,7 +757,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Классическая задача — итеративный разворот за &lt;code>O(n)&lt;/code> и &lt;code>O(1)&lt;/code> памяти:&lt;/p></description></item><item><title>Память и производительность срезов</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-05/02-memory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-05/02-memory/</guid><description>&lt;h2 id="внутренняя-структура-среза" class=link_owner>
+&lt;p>Классическая задача — итеративный разворот за &lt;code>O(n)&lt;/code> и &lt;code>O(1)&lt;/code> памяти:&lt;/p></description></item><item><title>Память и производительность срезов</title><link>https://gotogolang.github.io/go/algorithms/chapter-05/02-memory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-05/02-memory/</guid><description>&lt;h2 id="внутренняя-структура-среза" class=link_owner>
  Внутренняя структура среза
  &lt;a href="#%d0%b2%d0%bd%d1%83%d1%82%d1%80%d0%b5%d0%bd%d0%bd%d1%8f%d1%8f-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0-%d1%81%d1%80%d0%b5%d0%b7%d0%b0" class="link icon">
  &lt;svg>
@@ -795,7 +795,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// cap: 0→1, 1→2, 2→4, 4→8&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Стратегия удвоения даёт амортизированную стоимость &lt;code>O(1)&lt;/code> на один &lt;code>append&lt;/code>.&lt;/p></description></item><item><title>Сбалансированные деревья: AVL и Red-Black</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-08/02-balanced/</guid><description>&lt;h2 id="проблема-несбалансированности" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Стратегия удвоения даёт амортизированную стоимость &lt;code>O(1)&lt;/code> на один &lt;code>append&lt;/code>.&lt;/p></description></item><item><title>Сбалансированные деревья: AVL и Red-Black</title><link>https://gotogolang.github.io/go/algorithms/chapter-08/02-balanced/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-08/02-balanced/</guid><description>&lt;h2 id="проблема-несбалансированности" class=link_owner>
  Проблема несбалансированности
  &lt;a href="#%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d0%b0-%d0%bd%d0%b5%d1%81%d0%b1%d0%b0%d0%bb%d0%b0%d0%bd%d1%81%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
  &lt;svg>
@@ -859,7 +859,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// обновить высоты y, затем x&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>AVL гарантирует &lt;code>h ≤ 1.44 log₂(n+2)&lt;/code>. Поиск быстрее Red-Black, вставка/удаление медленнее.&lt;/p></description></item><item><title>Минимальное остовное дерево</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-09/03-spanning-tree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-09/03-spanning-tree/</guid><description>&lt;h2 id="определение" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>AVL гарантирует &lt;code>h ≤ 1.44 log₂(n+2)&lt;/code>. Поиск быстрее Red-Black, вставка/удаление медленнее.&lt;/p></description></item><item><title>Минимальное остовное дерево</title><link>https://gotogolang.github.io/go/algorithms/chapter-09/03-spanning-tree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-09/03-spanning-tree/</guid><description>&lt;h2 id="определение" class=link_owner>
  Определение
  &lt;a href="#%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5" class="link icon">
  &lt;svg>
@@ -903,7 +903,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">total&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Сложность с очередью с приоритетом: &lt;code>O(E log V)&lt;/code>.&lt;/p></description></item><item><title>Обходы дерева</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-08/03-traversal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-08/03-traversal/</guid><description>&lt;h2 id="обходы-в-глубину-dfs" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Сложность с очередью с приоритетом: &lt;code>O(E log V)&lt;/code>.&lt;/p></description></item><item><title>Обходы дерева</title><link>https://gotogolang.github.io/go/algorithms/chapter-08/03-traversal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-08/03-traversal/</guid><description>&lt;h2 id="обходы-в-глубину-dfs" class=link_owner>
  Обходы в глубину (DFS)
  &lt;a href="#%d0%be%d0%b1%d1%85%d0%be%d0%b4%d1%8b-%d0%b2-%d0%b3%d0%bb%d1%83%d0%b1%d0%b8%d0%bd%d1%83-dfs" class="link icon">
  &lt;svg>
@@ -964,7 +964,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Обходит дерево уровень за уровнем, используя очередь:&lt;/p></description></item><item><title>Оптимизация производительности map</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-04/03-performance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-04/03-performance/</guid><description>&lt;h2 id="предвыделение-памяти" class=link_owner>
+&lt;p>Обходит дерево уровень за уровнем, используя очередь:&lt;/p></description></item><item><title>Оптимизация производительности map</title><link>https://gotogolang.github.io/go/algorithms/chapter-04/03-performance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-04/03-performance/</guid><description>&lt;h2 id="предвыделение-памяти" class=link_owner>
  Предвыделение памяти
  &lt;a href="#%d0%bf%d1%80%d0%b5%d0%b4%d0%b2%d1%8b%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d0%b0%d0%bc%d1%8f%d1%82%d0%b8" class="link icon">
  &lt;svg>
@@ -1014,7 +1014,7 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>Для горячих путей используй числовые ключи вместо строковых:&lt;/p></description></item><item><title>Очереди и стеки в стандартной библиотеке</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-07/03-stdlib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-07/03-stdlib/</guid><description>&lt;h2 id="containerlist-как-очередь-и-стек" class=link_owner>
+&lt;p>Для горячих путей используй числовые ключи вместо строковых:&lt;/p></description></item><item><title>Очереди и стеки в стандартной библиотеке</title><link>https://gotogolang.github.io/go/algorithms/chapter-07/03-stdlib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-07/03-stdlib/</guid><description>&lt;h2 id="containerlist-как-очередь-и-стек" class=link_owner>
  container/list как очередь и стек
  &lt;a href="#containerlist-%d0%ba%d0%b0%d0%ba-%d0%be%d1%87%d0%b5%d1%80%d0%b5%d0%b4%d1%8c-%d0%b8-%d1%81%d1%82%d0%b5%d0%ba" class="link icon">
  &lt;svg>
@@ -1079,7 +1079,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Канал Go — это потокобезопасная очередь с фиксированным буфером:&lt;/p></description></item><item><title>Реализация списка с интерфейсами Go</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-06/03-interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-06/03-interfaces/</guid><description>&lt;h2 id="containerlist-из-стандартной-библиотеки" class=link_owner>
+&lt;p>Канал Go — это потокобезопасная очередь с фиксированным буфером:&lt;/p></description></item><item><title>Реализация списка с интерфейсами Go</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/03-interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/03-interfaces/</guid><description>&lt;h2 id="containerlist-из-стандартной-библиотеки" class=link_owner>
  container/list из стандартной библиотеки
  &lt;a href="#containerlist-%d0%b8%d0%b7-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82%d0%bd%d0%be%d0%b9-%d0%b1%d0%b8%d0%b1%d0%bb%d0%b8%d0%be%d1%82%d0%b5%d0%ba%d0%b8" class="link icon">
  &lt;svg>
@@ -1196,7 +1196,7 @@
  &lt;td>medium&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Сложность базовых операций</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-01/03-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-01/03-operations/</guid><description>&lt;h2 id="четыре-основных-операции" class=link_owner>
+&lt;/table></description></item><item><title>Сложность базовых операций</title><link>https://gotogolang.github.io/go/algorithms/chapter-01/03-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-01/03-operations/</guid><description>&lt;h2 id="четыре-основных-операции" class=link_owner>
  Четыре основных операции
  &lt;a href="#%d1%87%d0%b5%d1%82%d1%8b%d1%80%d0%b5-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d1%85-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d0%b8" class="link icon">
  &lt;svg>
@@ -1287,7 +1287,7 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>* амортизированно; ** при наличии указателя на узел.&lt;/p></description></item><item><title>Современные алгоритмы поиска</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-03/03-pattern-modern/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-03/03-pattern-modern/</guid><description>&lt;h2 id="суффиксные-автоматы-suffix-automaton" class=link_owner>
+&lt;p>* амортизированно; ** при наличии указателя на узел.&lt;/p></description></item><item><title>Современные алгоритмы поиска</title><link>https://gotogolang.github.io/go/algorithms/chapter-03/03-pattern-modern/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-03/03-pattern-modern/</guid><description>&lt;h2 id="суффиксные-автоматы-suffix-automaton" class=link_owner>
  Суффиксные автоматы (Suffix Automaton)
  &lt;a href="#%d1%81%d1%83%d1%84%d1%84%d0%b8%d0%ba%d1%81%d0%bd%d1%8b%d0%b5-%d0%b0%d0%b2%d1%82%d0%be%d0%bc%d0%b0%d1%82%d1%8b-suffix-automaton" class="link icon">
  &lt;svg>
@@ -1317,7 +1317,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Поиск строк, &lt;strong>похожих&lt;/strong> на шаблон, с учётом допустимого числа отличий.&lt;/p></description></item><item><title>Сортировка в стандартном пакете Go</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-02/03-go-sort/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-02/03-go-sort/</guid><description>&lt;p>Пакет &lt;code>sort&lt;/code> содержит всё необходимое для практической сортировки.&lt;/p>
+&lt;p>Поиск строк, &lt;strong>похожих&lt;/strong> на шаблон, с учётом допустимого числа отличий.&lt;/p></description></item><item><title>Сортировка в стандартном пакете Go</title><link>https://gotogolang.github.io/go/algorithms/chapter-02/03-go-sort/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-02/03-go-sort/</guid><description>&lt;p>Пакет &lt;code>sort&lt;/code> содержит всё необходимое для практической сортировки.&lt;/p>
 &lt;h2 id="sortslice" class=link_owner>
  sort.Slice
  &lt;a href="#sortslice" class="link icon">
@@ -1425,7 +1425,7 @@
  &lt;td>medium&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Эффективная обработка больших данных</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-05/03-bulk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-05/03-bulk/</guid><description>&lt;h2 id="потоковая-обработка" class=link_owner>
+&lt;/table></description></item><item><title>Эффективная обработка больших данных</title><link>https://gotogolang.github.io/go/algorithms/chapter-05/03-bulk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-05/03-bulk/</guid><description>&lt;h2 id="потоковая-обработка" class=link_owner>
  Потоковая обработка
  &lt;a href="#%d0%bf%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%b2%d0%b0%d1%8f-%d0%be%d0%b1%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b0" class="link icon">
  &lt;svg>
@@ -1552,7 +1552,7 @@
  &lt;td>medium&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Выбор алгоритма сортировки</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-02/04-choosing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-02/04-choosing/</guid><description>&lt;h2 id="итоговое-сравнение" class=link_owner>
+&lt;/table></description></item><item><title>Выбор алгоритма сортировки</title><link>https://gotogolang.github.io/go/algorithms/chapter-02/04-choosing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-02/04-choosing/</guid><description>&lt;h2 id="итоговое-сравнение" class=link_owner>
  Итоговое сравнение
  &lt;a href="#%d0%b8%d1%82%d0%be%d0%b3%d0%be%d0%b2%d0%be%d0%b5-%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5" class="link icon">
  &lt;svg>
@@ -1622,7 +1622,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;strong>Используй &lt;code>sort.Slice&lt;/code>&lt;/strong> — реализация Go (паттерн pdqsort) быстра на реальных данных.&lt;/p></description></item><item><title>Интерфейсы для графов в Go</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-09/04-interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-09/04-interfaces/</guid><description>&lt;h2 id="обобщённый-интерфейс-графа" class=link_owner>
+&lt;p>&lt;strong>Используй &lt;code>sort.Slice&lt;/code>&lt;/strong> — реализация Go (паттерн pdqsort) быстра на реальных данных.&lt;/p></description></item><item><title>Интерфейсы для графов в Go</title><link>https://gotogolang.github.io/go/algorithms/chapter-09/04-interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-09/04-interfaces/</guid><description>&lt;h2 id="обобщённый-интерфейс-графа" class=link_owner>
  Обобщённый интерфейс графа
  &lt;a href="#%d0%be%d0%b1%d0%be%d0%b1%d1%89%d1%91%d0%bd%d0%bd%d1%8b%d0%b9-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d1%84%d0%b5%d0%b9%d1%81-%d0%b3%d1%80%d0%b0%d1%84%d0%b0" class="link icon">
  &lt;svg>
@@ -1740,7 +1740,7 @@
  &lt;td>medium&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Списки против массивов: когда что использовать</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-06/04-vs-arrays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-06/04-vs-arrays/</guid><description>&lt;h2 id="сравнение-операций" class=link_owner>
+&lt;/table></description></item><item><title>Списки против массивов: когда что использовать</title><link>https://gotogolang.github.io/go/algorithms/chapter-06/04-vs-arrays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-06/04-vs-arrays/</guid><description>&lt;h2 id="сравнение-операций" class=link_owner>
  Сравнение операций
  &lt;a href="#%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d0%b9" class="link icon">
  &lt;svg>
@@ -1813,7 +1813,7 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>Массивы — &lt;strong>непрерывная&lt;/strong> область памяти. Процессор загружает соседние элементы в кэш-линию (64 байта). Связный список — узлы разбросаны по heap, каждый переход по &lt;code>next&lt;/code> — потенциальный cache miss.&lt;/p></description></item><item><title>Строитель строк и другие динамические структуры</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-05/04-builders/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-05/04-builders/</guid><description>&lt;h2 id="stringsbuilder" class=link_owner>
+&lt;p>Массивы — &lt;strong>непрерывная&lt;/strong> область памяти. Процессор загружает соседние элементы в кэш-линию (64 байта). Связный список — узлы разбросаны по heap, каждый переход по &lt;code>next&lt;/code> — потенциальный cache miss.&lt;/p></description></item><item><title>Строитель строк и другие динамические структуры</title><link>https://gotogolang.github.io/go/algorithms/chapter-05/04-builders/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-05/04-builders/</guid><description>&lt;h2 id="stringsbuilder" class=link_owner>
  strings.Builder
  &lt;a href="#stringsbuilder" class="link icon">
  &lt;svg>
@@ -1891,7 +1891,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">queue&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">{}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">queue&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">queue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// enqueue&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">front&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">queue&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="nx">queue&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">queue&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">:]&lt;/span> &lt;span class="c1">// dequeue — сдвигает все элементы&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Для эффективной очереди — кольцевой буфер или &lt;code>container/list&lt;/code>.&lt;/p></description></item><item><title>Кратчайшие пути: алгоритм Дейкстры</title><link>https://gotogolang.github.io/dojo/algorithms/chapter-09/05-shortest-path/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/algorithms/chapter-09/05-shortest-path/</guid><description>&lt;h2 id="задача" class=link_owner>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Для эффективной очереди — кольцевой буфер или &lt;code>container/list&lt;/code>.&lt;/p></description></item><item><title>Кратчайшие пути: алгоритм Дейкстры</title><link>https://gotogolang.github.io/go/algorithms/chapter-09/05-shortest-path/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-09/05-shortest-path/</guid><description>&lt;h2 id="задача" class=link_owner>
  Задача
  &lt;a href="#%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b0" class="link icon">
  &lt;svg>

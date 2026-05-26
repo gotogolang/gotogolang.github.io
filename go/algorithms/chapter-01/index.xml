@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Глава 1. Анализ эффективности и сложность алгоритмов on GoToGo</title><link>https://gotogolang.github.io/go/algorithms/chapter-01/</link><description>Recent content in Глава 1. Анализ эффективности и сложность алгоритмов on GoToGo</description><generator>Hugo</generator><language>en</language><atom:link href="https://gotogolang.github.io/go/algorithms/chapter-01/index.xml" rel="self" type="application/rss+xml"/><item><title>Асимптотическая сложность</title><link>https://gotogolang.github.io/go/algorithms/chapter-01/01-big-o/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-01/01-big-o/</guid><description>&lt;h2 id="зачем-нужна-формальная-оценка" class=link_owner>
+ Зачем нужна формальная оценка
+ &lt;a href="#%d0%b7%d0%b0%d1%87%d0%b5%d0%bc-%d0%bd%d1%83%d0%b6%d0%bd%d0%b0-%d1%84%d0%be%d1%80%d0%bc%d0%b0%d0%bb%d1%8c%d0%bd%d0%b0%d1%8f-%d0%be%d1%86%d0%b5%d0%bd%d0%ba%d0%b0" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Замер времени на конкретной машине ненадёжен: результат зависит от процессора, кэша и нагрузки.
+Нужна машинно-независимая мера — &lt;strong>количество операций как функция от размера входа &lt;code>n&lt;/code>&lt;/strong>.&lt;/p>
+&lt;h2 id="o-нотация" class=link_owner>
+ O-нотация
+ &lt;a href="#o-%d0%bd%d0%be%d1%82%d0%b0%d1%86%d0%b8%d1%8f" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;code>O(f(n))&lt;/code> описывает верхнюю границу роста: алгоритм выполнит не более &lt;code>c·f(n)&lt;/code> операций при достаточно большом &lt;code>n&lt;/code>.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Сложность&lt;/th>
+ &lt;th>Пример&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;td>доступ по индексу, push/pop&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>O(log n)&lt;/code>&lt;/td>
+ &lt;td>бинарный поиск&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>линейный проход&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>O(n log n)&lt;/code>&lt;/td>
+ &lt;td>MergeSort, HeapSort&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>O(n²)&lt;/code>&lt;/td>
+ &lt;td>вложенные циклы, BubbleSort&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>O(2ⁿ)&lt;/code>&lt;/td>
+ &lt;td>перебор всех подмножеств&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Рост при увеличении &lt;code>n&lt;/code>:&lt;/p></description></item><item><title>Временная и пространственная сложность</title><link>https://gotogolang.github.io/go/algorithms/chapter-01/02-time-space/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-01/02-time-space/</guid><description>&lt;h2 id="два-измерения-эффективности" class=link_owner>
+ Два измерения эффективности
+ &lt;a href="#%d0%b4%d0%b2%d0%b0-%d0%b8%d0%b7%d0%bc%d0%b5%d1%80%d0%b5%d0%bd%d0%b8%d1%8f-%d1%8d%d1%84%d1%84%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d0%be%d1%81%d1%82%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Алгоритм характеризуется двумя показателями:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Временная сложность&lt;/strong> — сколько операций выполняется.&lt;/li>
+&lt;li>&lt;strong>Пространственная сложность&lt;/strong> — сколько дополнительной памяти требуется.&lt;/li>
+&lt;/ul>
+&lt;p>Часто приходится выбирать: быстрее &lt;em>или&lt;/em> экономнее по памяти.&lt;/p>
+&lt;h2 id="временная-сложность" class=link_owner>
+ Временная сложность
+ &lt;a href="#%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d0%b0%d1%8f-%d1%81%d0%bb%d0%be%d0%b6%d0%bd%d0%be%d1%81%d1%82%d1%8c" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Оценивается в трёх сценариях:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Сценарий&lt;/th>
+ &lt;th>Описание&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Лучший случай&lt;/td>
+ &lt;td>Входные данные идеальны (редко важен)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Средний случай&lt;/td>
+ &lt;td>Ожидаемое поведение на случайных данных&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Худший случай&lt;/td>
+ &lt;td>Гарантия для любых данных (основной)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Пример — линейный поиск:&lt;/p></description></item><item><title>Сложность базовых операций</title><link>https://gotogolang.github.io/go/algorithms/chapter-01/03-operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/go/algorithms/chapter-01/03-operations/</guid><description>&lt;h2 id="четыре-основных-операции" class=link_owner>
+ Четыре основных операции
+ &lt;a href="#%d1%87%d0%b5%d1%82%d1%8b%d1%80%d0%b5-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d1%85-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d0%b8" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Любая структура данных поддерживает четыре базовые операции:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Операция&lt;/th>
+ &lt;th>Описание&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Поиск&lt;/td>
+ &lt;td>Найти элемент по значению или ключу&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Вставка&lt;/td>
+ &lt;td>Добавить новый элемент&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Удаление&lt;/td>
+ &lt;td>Убрать элемент&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Доступ&lt;/td>
+ &lt;td>Получить элемент по позиции или ключу&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="сравнение-структур-данных" class=link_owner>
+ Сравнение структур данных
+ &lt;a href="#%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d1%85" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Структура&lt;/th>
+ &lt;th>Доступ&lt;/th>
+ &lt;th>Поиск&lt;/th>
+ &lt;th>Вставка&lt;/th>
+ &lt;th>Удаление&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Массив&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Динамический массив&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>*&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Связный список&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>**&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>**&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Хеш-таблица&lt;/td>
+ &lt;td>—&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(1)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>BST (сбал.)&lt;/td>
+ &lt;td>&lt;code>O(log n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(log n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(log n)&lt;/code>&lt;/td>
+ &lt;td>&lt;code>O(log n)&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>* амортизированно; ** при наличии указателя на узел.&lt;/p></description></item></channel></rss>
