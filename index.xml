@@ -1283,37 +1283,41 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// cap: 0→1, 1→2, 2→4, 4→8&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Стратегия удвоения даёт амортизированную стоимость &lt;code>O(1)&lt;/code> на один &lt;code>append&lt;/code>.&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-go" class=link_owner>
- Hello, Go!
- &lt;a href="#hello-go" class="link icon">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Стратегия удвоения даёт амортизированную стоимость &lt;code>O(1)&lt;/code> на один &lt;code>append&lt;/code>.&lt;/p></description></item><item><title>Первая программа</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-01/02-hello-world/</guid><description>&lt;h2 id="hello-world" class=link_owner>
+ Hello, World!
+ &lt;a href="#hello-world" class="link icon">
  &lt;svg>
  &lt;use xlink:href="#anchor-link">&lt;/use>
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
+&lt;p>Давайте рассмотрим основные элементы синтаксиса языка на примере простой программы:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, Go!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Разберём построчно:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>package main&lt;/code> — каждый Go-файл объявляет принадлежность к пакету. &lt;code>main&lt;/code> — точка входа в исполняемую программу.&lt;/li>
-&lt;li>&lt;code>import &amp;quot;fmt&amp;quot;&lt;/code> — подключаем стандартный пакет форматированного ввода-вывода.&lt;/li>
-&lt;li>&lt;code>func main()&lt;/code> — вызывается при запуске программы. Нет аргументов, нет возвращаемого значения.&lt;/li>
-&lt;li>&lt;code>fmt.Println(...)&lt;/code> — выводит аргументы в stdout с переводом строки.&lt;/li>
-&lt;/ul>
-&lt;h2 id="пакеты-и-импорт" class=link_owner>
- Пакеты и импорт
- &lt;a href="#%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b8-%d0%b8%d0%bc%d0%bf%d0%be%d1%80%d1%82" class="link icon">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Разберём, что здесь происходит, построчно.&lt;/p>
+&lt;h3 id="package-main" class=link_owner>
+ &lt;code>package main&lt;/code>
+ &lt;a href="#package-main" class="link icon">
  &lt;svg>
  &lt;use xlink:href="#anchor-link">&lt;/use>
  &lt;/svg>
  &lt;/a>
-&lt;/h2>
-&lt;p>Пакет — базовая единица организации кода в Go. Несколько пакетов в одном импорте:&lt;/p></description></item><item><title>Передача по значению и по указателю</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</guid><description>&lt;h2 id="по-умолчанию--копия" class=link_owner>
+&lt;/h3>
+&lt;p>В начале каждого Go-файла объявляется принадлежность к пакету. Для запуска приложения обязательно наличие пакета с именем &lt;code>main&lt;/code>.&lt;/p>
+&lt;h3 id="import-fmt" class=link_owner>
+ &lt;code>import &amp;quot;fmt&amp;quot;&lt;/code>
+ &lt;a href="#import-fmt" class="link icon">
+ &lt;svg>
+ &lt;use xlink:href="#anchor-link">&lt;/use>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h3>
+&lt;p>После определения принадлежности к пакету указывается список используемых внешних зависимостей. В нашем случае — мы подключаем пакет форматирования &lt;code>fmt&lt;/code> из стандартной библиотеки.&lt;/p></description></item><item><title>Передача по значению и по указателю</title><link>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gotogolang.github.io/dojo/go-to-go/chapter-04/02-value-vs-reference/</guid><description>&lt;h2 id="по-умолчанию--копия" class=link_owner>
  По умолчанию — копия
  &lt;a href="#%d0%bf%d0%be-%d1%83%d0%bc%d0%be%d0%bb%d1%87%d0%b0%d0%bd%d0%b8%d1%8e--%d0%ba%d0%be%d0%bf%d0%b8%d1%8f" class="link icon">
  &lt;svg>
